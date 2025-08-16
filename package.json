@@ -1,5 +1,5 @@
 {
-  "name": "german-event",
+  "name": "germanistik-konferenz-2026",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -7,7 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-page -d dist"
   },
   "dependencies": {
     "@astrojs/tailwind": "^6.0.2",
