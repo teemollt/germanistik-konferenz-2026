@@ -1,6 +1,6 @@
 export const content = {
     de: { // 독일어 (de)
-      "headerTitle": "AGT 2026",
+      "headerTitle": "AGT  2026",
       "navAbout": "Über die AGT",
       "navTheme": "Generalthema",
       "navRegister": "Anmeldung",
@@ -17,6 +17,9 @@ export const content = {
       "presidentMessageTitle": "Grußwort des Präsidenten",
       "presidentName": "Prof. Dr. Mustermann, Präsident der KGG",
       "presidentMessage": "Liebe Kolleginnen und Kollegen, im Namen des gesamten Organisationsteams heiße ich Sie herzlich zur Asiatischen Germanistentagung 2026 in Incheon willkommen. Wir freuen uns auf einen anregenden Austausch.",
+      "presidentDesc1": "Liebe Kolleginnen und Kollegen, liebe Germanistinnen und Germanisten,",
+      "presidentDesc2": "herzlich willkommen zur 17. Asiatischen Germanistentagung 2026 in Seoul! Es ist mir eine besondere Ehre, Sie als Präsident der Koreanischen Gesellschaft für Germanistik (KGG) zu diesem bedeutenden Ereignis begrüßen zu dürfen. Unter dem Motto „Germanistik in Asien: Traditionen, Umbrüche, Perspektiven“ erwartet uns ein anregender Austausch über die Zukunft unseres Fachs.",
+      "presidentDesc3": "Ich freue mich auf inspirierende Diskussionen und unvergessliche Momente mit Ihnen.",
       "registerTitle": "Anmeldung",
       "registerType1Title": "1. Sektionsleitung",
       "registerType1Deadline": "Bewerbungsfrist: 28. Feb. 2026",
@@ -49,7 +52,7 @@ export const content = {
       "footerCopyright": "© 2026 Asiatische Germanistentagung Organizing Committee. All Rights Reserved."
     },
     en: { // 영어 (en)
-      "headerTitle": "AGT 2026",
+      "headerTitle": "AGT  2026",
       "navAbout": "About AGT",
       "navTheme": "Main Theme",
       "navRegister": "Registration",
@@ -63,6 +66,9 @@ export const content = {
       "aboutTitle": "About the AGT",
       "aboutDesc1": "The Asian German-studies Conference (AGT) is a central forum for German scholars from all over Asia and beyond. Since its foundation in [Founding Year], it has served for academic exchange, networking, and the promotion of young researchers in the field of German language, literature, and culture.",
       "aboutDesc2": "The conference takes place every [Number] years and has been hosted in cities such as [Beijing, Tokyo, Seoul]. It provides a platform to present the latest research findings and to initiate joint projects.",
+      "presidentDesc1": "Dear colleagues, dear Germanists,",
+      "presidentDesc2": "A warm welcome to the 17th Asian German-studies Conference 2026 in Seoul! It is a special honor for me, as President of the Korean Society for German Studies (KGG), to welcome you to this significant event. Under the theme 'German Studies in Asia: Traditions, Upheavals, Perspectives,' an inspiring exchange about the future of our field awaits us.",
+      "presidentDesc3": "I look forward to inspiring discussions and unforgettable moments with you.",
       "registerTitle": "Registration",
       "registerType1Title": "1. Section Leaders",
       "registerType1Deadline": "Application Deadline: Feb 28, 2026",
@@ -95,7 +101,7 @@ export const content = {
       "footerCopyright": "© 2026 Asian German-studies Conference Organizing Committee. All Rights Reserved."
     },
     ko: { // 한국어 (ko)
-      "headerTitle": "AGT 2026",
+      "headerTitle": "AGT  2026",
       "navAbout": "AGT 소개",
       "navTheme": "대회 주제",
       "navRegister": "참가 신청",
@@ -109,6 +115,9 @@ export const content = {
       "aboutTitle": "아시아독문학자대회(AGT) 소개",
       "aboutDesc1": "아시아독문학자대회(AGT)는 아시아 전역과 그 외 지역의 독문학자들을 위한 핵심적인 포럼입니다. [설립 연도]년 창립 이래, 독일어, 문학, 문화 분야의 학술 교류, 네트워크 형성, 신진 연구자 양성을 위해 기여해왔습니다.",
       "aboutDesc2": "본 학술대회는 [주기]년마다 개최되며, 과거 [베이징, 도쿄, 서울] 등 여러 도시에서 성공적으로 열렸습니다. 최신 연구 성과를 발표하고 공동 프로젝트를 시작하는 중요한 플랫폼을 제공합니다.",
+      "presidentDesc1": "친애하는 동료, 독문학자 여러분,",
+      "presidentDesc2": "제17회 2026년 서울 아시아독문학자대회에 오신 것을 진심으로 환영합니다! 한국독어독문학회(KGG) 회장으로서 이 중요한 행사에 여러분을 맞이하게 되어 매우 특별한 영광입니다. '아시아의 독문학: 전통, 격변, 전망'이라는 주제 아래, 우리 학문의 미래에 대한 고무적인 교류가 우리를 기다리고 있습니다.",
+      "presidentDesc3": "여러분과 함께 영감 넘치는 토론과 잊지 못할 순간들을 기대합니다.",
       "registerTitle": "참가 신청",
       "registerType1Title": "1. 분과 책임자",
       "registerType1Deadline": "신청 마감: 2026년 2월 28일",
