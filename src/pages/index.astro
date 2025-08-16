@@ -9,14 +9,16 @@ import VenueSection from '../components/VenueSection.astro';
 import TeamSection from '../components/TeamSection.astro';
 import Footer from '../components/Footer.astro';
 import { content } from '../i18n/content';
+import PresidentMessage from '../components/PresidentMessage.astro';
 ---
 
 <Layout title="AGT 2026 Incheon (Final Prototype)">
 	<Header />
 	<main class="relative z-30">
 		<HeroSection />
-		<ThemeSection />
 		<AboutSection />
+        <PresidentMessage />
+		<ThemeSection />
 		<RegistrationSection />
 		<VenueSection />
 		<TeamSection />
