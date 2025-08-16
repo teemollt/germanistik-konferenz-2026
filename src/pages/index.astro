@@ -1,11 +1,88 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/Header.astro';
+import HeroSection from '../components/HeroSection.astro';
+import ThemeSection from '../components/ThemeSection.astro';
+import AboutSection from '../components/AboutSection.astro';
+import RegistrationSection from '../components/RegistrationSection.astro';
+import VenueSection from '../components/VenueSection.astro';
+import TeamSection from '../components/TeamSection.astro';
+import Footer from '../components/Footer.astro';
+import { content } from '../i18n/content';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="AGT 2026 Incheon (Final Prototype)">
+	<Header />
+	<main class="relative z-30">
+		<HeroSection />
+		<ThemeSection />
+		<AboutSection />
+		<RegistrationSection />
+		<VenueSection />
+		<TeamSection />
+	</main>
+	<Footer />
 </Layout>
+
+<script is:inline define:vars={{ content }}>
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        const langButtons = {
+            de: [document.getElementById('lang-de-desktop'), document.getElementById('lang-de-mobile')],
+            en: [document.getElementById('lang-en-desktop'), document.getElementById('lang-en-mobile')],
+            ko: [document.getElementById('lang-ko-desktop'), document.getElementById('lang-ko-mobile')]
+        };
+
+        const updateLanguage = (lang) => {
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-lang-key]').forEach(el => {
+                const key = el.getAttribute('data-lang-key');
+                if (content[lang] && content[lang][key]) {
+                    el.innerHTML = content[lang][key];
+                }
+            });
+
+            Object.values(langButtons).forEach(buttons => {
+                if (buttons) buttons.forEach(button => {
+                    if (button) button.classList.remove('active')
+                });
+            });
+            if (langButtons[lang]) {
+                langButtons[lang].forEach(button => {
+                    if (button) button.classList.add('active')
+                });
+            }
+        };
+
+        Object.keys(langButtons).forEach(lang => {
+            if (langButtons[lang]) {
+                langButtons[lang].forEach(button => {
+                    if(button) button.addEventListener('click', () => updateLanguage(lang));
+                });
+            }
+        });
+        
+        // Close mobile menu when a link is clicked
+        if (mobileMenu) {
+            const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+            if (mobileMenuLinks) {
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+        }
+
+        // Set German as the default language on initial load
+        updateLanguage('de');
+    });
+</script>

@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-[#192A4D] text-slate-200;
+        font-family: 'Inter', 'Noto Sans KR', sans-serif;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+@layer components {
+    .hero-gradient-text {
+        @apply bg-gradient-to-r from-yellow-300 to-amber-600;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .nav-link {
+        @apply transition-colors duration-300 ease-in-out;
+    }
+    .nav-link:hover {
+        @apply text-amber-400;
+    }
+    .btn-gold {
+        @apply bg-amber-600 text-white;
+    }
+    .btn-gold:hover {
+        @apply bg-amber-700;
+    }
+    .lang-switcher button.active {
+        @apply text-amber-400 font-bold;
+    }
+    .section-title {
+        @apply text-3xl font-bold text-center mb-8 hero-gradient-text;
+    }
+    .card {
+        @apply bg-slate-800 p-6 rounded-lg shadow-lg;
+    }
+}
