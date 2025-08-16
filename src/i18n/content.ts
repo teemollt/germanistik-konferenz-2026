@@ -2,6 +2,7 @@ export const content = {
     de: { // 독일어 (de)
       "headerTitle": "AGT  2026",
       "navAbout": "Über die AGT",
+      "navPresidentMessage": "Grußwort des Präsidenten",
       "navTheme": "Generalthema",
       "navRegister": "Anmeldung",
       "navVenue": "Tagungsort",
@@ -55,6 +56,7 @@ export const content = {
       "headerTitle": "AGT  2026",
       "navAbout": "About AGT",
       "navTheme": "Main Theme",
+      "navPresidentMessage": "President's Message",
       "navRegister": "Registration",
       "navVenue": "Venue",
       "navContact": "Contact",
@@ -104,6 +106,7 @@ export const content = {
       "headerTitle": "AGT  2026",
       "navAbout": "AGT 소개",
       "navTheme": "대회 주제",
+      "navPresidentMessage": "회장 인사말",
       "navRegister": "참가 신청",
       "navVenue": "행사 장소",
       "navContact": "연락처",
