@@ -1,0 +1,80 @@
+---
+import InfoCard from './InfoCard.astro';
+import SmallInfoCard from './SmallInfoCard.astro';
+import { content } from '../i18n/content';
+
+const base = import.meta.env.BASE_URL;
+
+// Data for the main information cards
+const mainInfo = [
+  {
+    titleKey: 'infoCardAnmeldung',
+    href: `${base}informationen/anmeldung`,
+    backgroundImage: `${base}photos/anmeldung-bg.jpg`,
+  },
+  {
+    titleKey: 'infoCardProgramm',
+    href: `${base}informationen/programm`,
+    backgroundImage: `${base}photos/programm-bg.jpg`,
+  },
+  {
+    titleKey: 'infoCardTagungsort',
+    href: `${base}informationen/tagungsort`,
+    backgroundImage: `${base}photos/tagungsort-bg.jpg`,
+  },
+  {
+    titleKey: 'infoCardRahmenprogramm',
+    href: `${base}informationen/rahmenprogramm`,
+    backgroundImage: `${base}photos/rahmenprogramm-bg.jpg`,
+  },
+];
+
+// Data for the smaller sub-menu cards
+const subInfo = [
+  {
+    titleKey: 'subInfoAnreise',
+    href: `${base}informationen/anreise-und-unterkunft`,
+    icon: `${base}icons/travel.svg`,
+  },
+  {
+    titleKey: 'subInfoLesungen',
+    href: `${base}informationen/lesungen`,
+    icon: `${base}icons/reading.svg`,
+  },
+  {
+    titleKey: 'subInfoFoerdergeber',
+    href: `${base}informationen/fordegeber`,
+    icon: `${base}icons/sponsor.svg`,
+  },
+];
+---
+
+<section id="informationen" class="py-20 md:py-24 bg-[#14223f]">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 md:mb-16" data-lang-key="informationenTitle">Informationen</h2>
+
+    <!-- Main Info Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20 md:mb-24">
+      {mainInfo.map(card => (
+        <InfoCard
+          title={content.de[card.titleKey]} // Default to German, script will switch
+          href={card.href}
+          backgroundImage={card.backgroundImage}
+          langKey={card.titleKey}
+        />
+      ))}
+    </div>
+
+    <!-- Sub Info Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      {subInfo.map(card => (
+        <SmallInfoCard
+          title={content.de[card.titleKey]} // Default to German, script will switch
+          href={card.href}
+          icon={card.icon}
+          langKey={card.titleKey}
+        />
+      ))}
+    </div>
+  </div>
+</section>

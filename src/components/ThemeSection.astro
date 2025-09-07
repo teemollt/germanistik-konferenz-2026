@@ -1,12 +1,77 @@
-
 <section id="theme" class="py-20 md:py-24 bg-[#14223f]">
     <div class="container mx-auto px-6 text-center" data-aos="fade-up">
         <h3 class="text-slate-400 font-semibold tracking-widest" data-lang-key="themeLabel">GENERALTHEMA</h3>
-        <p class="text-3xl md:text-4xl font-extrabold mt-4 text-white max-w-3xl mx-auto" data-lang-key="themeTitle">Nutzen und Nachteil der Germanistik in Asien für die Gegenwart</p>
-        <div class="mt-8 max-w-3xl mx-auto text-slate-300 text-lg leading-relaxed border-t border-slate-700 pt-8">
-            <p data-lang-key="themeDesc">
-                In einer sich schnell wandelnden globalen Landschaft untersucht diese Konferenz die dualistische Rolle der Germanistik in Asien. Wir erforschen sowohl die Vorteile als auch die Herausforderungen, die das Fach für die gegenwärtige Gesellschaft und den akademischen Diskurs mit sich bringt.
-            </p>
+        <p class="text-4xl md:text-4xl font-extrabold mt-4 text-white max-w-4xl mx-auto" data-lang-key="themeTitle"></p>
+        
+        <div class="mt-8 max-w-3xl mx-auto text-slate-300 text-lg leading-relaxed border-t border-slate-700 pt-8 text-left">
+            <div id="theme-description-wrapper">
+                <p id="short-desc" data-lang-key="themeShortDesc"></p>
+
+                <div id="full-desc" class="hidden space-y-4">
+                    <p data-lang-key="themeFullDesc1"></p>
+                    <p data-lang-key="themeFullDesc2"></p>
+                    <p data-lang-key="themeFullDesc3"></p>
+                    <p data-lang-key="themeFullDesc4"></p>
+                </div>
+            </div>
+
+            <button id="toggle-desc-btn" class="text-amber-400 hover:text-amber-500 font-semibold mt-6">
+                <!-- 1. '자세히 보기' 상태 (기본으로 보임) -->
+                <div class="show-more-content inline-flex items-center gap-2">
+                    <span data-lang-key="themeBtnReadMore">Mehr erfahren</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <!-- 2. '간략히 보기' 상태 (기본으로 숨김) -->
+                <div class="show-less-content hidden inline-flex items-center gap-2">
+                    <span data-lang-key="themeBtnShowLess">Weniger anzeigen</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                    </svg>
+                </div>
+            </button>
         </div>
     </div>
 </section>
+
+<script>
+ document.addEventListener('DOMContentLoaded', () => {
+        const toggleBtn = document.getElementById('toggle-desc-btn');
+        const shortDescEl = document.getElementById('short-desc');
+        const fullDescEl = document.getElementById('full-desc');
+        
+        const showMoreContent = toggleBtn?.querySelector('.show-more-content');
+        const showLessContent = toggleBtn?.querySelector('.show-less-content');
+
+        // 버튼이나 설명 영역이 없으면 스크립트를 실행하지 않음
+        if (!toggleBtn || !shortDescEl || !fullDescEl || !showMoreContent || !showLessContent) {
+            return;
+        }
+        
+        // 버튼에 클릭 이벤트 리스너 추가
+        toggleBtn.addEventListener('click', () => {
+
+            // 짧은 설명과 전체 설명의 'hidden' 클래스를 토글
+            // shortDescEl.classList.toggle('hidden');
+            fullDescEl.classList.toggle('hidden');
+
+            // 버튼 내부의 '자세히/간략히' div 표시 상태를 토글
+            showMoreContent.classList.toggle('hidden');
+            showLessContent.classList.toggle('hidden');
+            
+
+
+            // 버튼 텍스트를 변경하기 위한 임시 텍스트
+            // const readMoreText = "Ganze Beschreibung lesen"; // 또는 data-attribute에서 가져올 수 있음
+            // const showLessText = "Weniger anzeigen";
+
+            // 현재 버튼 텍스트를 확인하여 다음 텍스트로 변경
+            // if (toggleBtn.textContent === readMoreText) {
+            //     toggleBtn.textContent = showLessText;
+            // } else {
+            //     toggleBtn.textContent = readMoreText;
+            // }
+        });
+    });
+</script>

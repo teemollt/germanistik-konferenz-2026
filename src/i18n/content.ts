@@ -1,21 +1,84 @@
 export const content = {
     de: { // 독일어 (de)
       "headerTitle": "AGT  2026",
-      "navAbout": "Über die AGT",
-      "navPresidentMessage": "Grußwort des Präsidenten",
-      "navTheme": "Generalthema",
-      "navRegister": "Anmeldung",
-      "navVenue": "Tagungsort",
+      "navAbout": "Über AGT",
+      "navPresidentMessage": "Grußwort",
+      "navTheme": "Themenbeschreibung",
+      "navInfo": "Informationen",
       "navContact": "Kontakt",
       "heroTitle": "Asiatische Germanistentagung 2026",
       "heroSubtitle": "24. - 27. August 2026 | Incheon, Südkorea",
-      "themeLabel": "GENERALTHEMA",
+      "informationenTitle": "Informationen",
+      "infoCardAnmeldung": "Anmeldung",
+      "infoCardProgramm": "Programm und Sektionen",
+      "infoCardTagungsort": "Tagungsort",
+      "infoCardRahmenprogramm": "Rahmenprogramm",
+      "subInfoAnreise": "Anreise und Unterkunft",
+      "subInfoLesungen": "Lesungen",
+      "subInfoFoerdergeber": "Fördergeber",
+      "themeLabel": "Themenbeschreibung",
       "themeTitle": "Nutzen und Nachteil der Germanistik in Asien für die Gegenwart",
-      "themeDesc": "In einer sich schnell wandelnden globalen Landschaft untersucht diese Konferenz die dualistische Rolle der Germanistik in Asien. Wir erforschen sowohl die Vorteile als auch die Herausforderungen, die das Fach für die gegenwärtige Gesellschaft und den akademischen Diskurs mit sich bringt.",
-      "aboutTitle": "Über die AGT",
+      "themeShortDesc": `In Asien – mit Sicherheit aber zumindest in Korea – ist, heutzutage Germanist zu sein,
+      allem Anschein nach ein Nachteil. Das hat zum einen mit der zunehmenden
+      Marginalisierung des Deutschen zu tun. So ist nicht nur das Englische übermächtig,
+      sondern auch als zweite Fremdsprache in Schulen befindet sich Deutsch quantitativ im
+      Rückgang. Aber auch das Sprachen-Lernen selbst hat an Bedeutung eingebüßt: Wozu
+      soll man noch (und dazu ausgerechnet) Deutsch lernen, wenn sich alles durch mehr als
+      kompetente Übersetzungs-Apps im Handumdrehen übersetzen lässt?`,
+      "themeFullDesc1":
+        `Was die deutsche
+        Literatur betrifft, verschärft sich die Situation noch mehr. Gegenüber den digitalen
+        Medien ist das Medium Buch besonders für die jungeren Generationen immer weniger
+        attraktiv. Und außerdem: Wozu soll man Goethe, Musil oder Kafka lesen, wenn wir
+        Asiaten selbst ‚Hochliteratur‘, wie z. B. Mo Yan, den Nobelpreisträger für Literatur im Jahr
+        2012, oder Han Kang, die Nobelpreisträgerin 2024, hervorbringen, ganz zu schweigen
+        von der ‚Welteroberung‘ durch populärkulturelle ‚K-Contents’. Dementsprechend
+        geraten (wenigstens hier in Korea) die Abteilungen für Deutsche Sprache und Literatur
+        immer mehr ins Hintertreffen. Es werden die Studienplätze und Lehrstühle reduziert, um
+        die digitalen und technischen Studiengängen auszuweiten. Germanistik ist unter der
+        digitaltechnischen Vorherrschaft immer stärker ‚unzeitgemäß‘ geworden und befindet
+        sich in der Krise.`,
+        "themeFullDesc2":
+        `Trotzdem hat, in Asien Germanist zu sein, sehr wohl einen Nutzen, was paradoxerweise
+        gerade mit diesem Zeitgeist, der die Germanistik marginalisiert, zu tun hat. Nämlich: Die
+        für die Technik begeisterte Zeit selbst befindet sich in der Krise, welche sich mit den
+        großen ‚K‘s – Krieg, KI (künstliche Intelligenz) und Klimawandel – umschreiben lässt.
+        Um die einzelnen Probleme, die mit diesen drei großen ‚K’s zusammenhängen, zu
+        nennen: aus politischer und sozialer Hinsicht Nationalismus, Flüchtlingskrise, Trauma,
+        Erinnerungskultur und die Identitätsfragen; aus ökonomischer Hinsicht die Digitalisierung,
+        die Techno-Utopien des Transhumanen, die mit der KI zusammenhängen; schließlich aus
+        ökologischer Hinsicht das Artensterben, Nachhaltigkeit, Klimawandel. Die Germanistik
+        (Inlands- sowie Auslandsgermanistik) hat immer versucht, sich den Herausforderungen,
+        die die komplexen Probleme der Gesellschaft stellen, gewachsen zu zeigen, wie auch das
+        Generalthema des Kongresses der IVG (Internationale Vereinigung für Germanistik) 2025
+        in Graz zeigt: Sprache und Literatur in Krisenzeiten – Herausforderungen, Aufgaben und
+        Chancen der internationalen Germanistik. Und hier liegt unser Nutzen in dieser an dem
+        Technik-Fieber leidenden Zeit. Denn Sprache und Literatur sind die Reflexionsfläche für
+        die Probleme der Gegenwart. So führt die neue digitale Technik auch in der Sprache und
+        Literatur zu einer ‚digitalen Wende‘. Beispiele sind die digitale Literatur, also durch KI
+        generierte oder auf Twitter veröffentliche Gedichte. Oder die Einbeziehung von KI in den
+        Sprachunterricht. Sprache und Literatur sind der Aushandlungs- und Handlungsort dieser
+        Probleme, wie z. B. Climate Fiction auf die Klima-Krise reagiert, indem sie die Wirklichkeit
+        konfiguriert und den Leser zur Refiguration der Wirklichkeit motiviert.`,
+      "themeFullDesc3":
+        `Und gerade die Asiatische (bzw. Auslands-)Germanistik hat ihre Chance in dieser
+        Krisenzeit. Denn einerseits ist der Siegeszug der digitalen Technik hier rasanter und
+        umfangreicher als in Europa zu spüren. Andererseits kann die asiatische Germanistik,
+        abseits der nationalphilologischen Aufgaben stehend, mehr auf die interkulturellen,
+        internationalen und transnationalen Aspekte der Sprache und Literatur gerichtet sein. Die
+        Probleme, die die jetzigen Krisenzeiten bestimmen, sind nur durch inter- oder
+        transkulturelle und transnationale Kommunikation und Zusammenarbeit zu lösen.`,
+      "themeFullDesc4":
+        `Daher möchten wir, die asiatischen Germanisten, gerne ‚unzeitgemäß‘ bleiben, in dem
+        Sinne, dass wir „gegen die Zeit und dadurch auf die Zeit und hoffentlich zugunsten einer
+        kommenden Zukunft […] wirken“, worin Nietzsche als klassischer Philologe seine
+        Existenzberechtigung gesehen hat.`,
+      "themeBtnReadMore": "Mehr erfahren", // 더 알아보기
+      "themeBtnShowLess": "Weniger anzeigen", // 간략히 보기
+      "aboutTitle": "Über AGT",
       "aboutDesc1": "Die Asiatische Germanistentagung (AGT) ist ein zentrales Forum für Germanistinnen und Germanisten aus ganz Asien und darüber hinaus. Seit ihrer Gründung im Jahr [Gründungsjahr einfügen] dient sie dem wissenschaftlichen Austausch, der Vernetzung und der Förderung des Nachwuchses im Bereich der deutschen Sprache, Literatur und Kultur.",
       "aboutDesc2": "Die Tagung findet alle [Turnus einfügen] Jahre statt und wurde bereits in Städten wie [Peking, Tokio, Seoul] ausgerichtet. Sie bietet eine Plattform, um neueste Forschungsergebnisse zu präsentieren und gemeinsame Projekte zu initiieren.",
-      "presidentMessageTitle": "Grußwort des Präsidenten",
+      "presidentMessageTitle": "Grußwort",
       "presidentName": "Prof. Dr. Mustermann, Präsident der KGG",
       "presidentMessage": "Liebe Kolleginnen und Kollegen, im Namen des gesamten Organisationsteams heiße ich Sie herzlich zur Asiatischen Germanistentagung 2026 in Incheon willkommen. Wir freuen uns auf einen anregenden Austausch.",
       "presidentDesc1": "Liebe Kolleginnen und Kollegen, liebe Germanistinnen und Germanisten,",
@@ -57,14 +120,31 @@ export const content = {
       "navAbout": "About AGT",
       "navTheme": "Main Theme",
       "navPresidentMessage": "President's Message",
-      "navRegister": "Registration",
-      "navVenue": "Venue",
+      "navInfo": "Information",
       "navContact": "Contact",
       "heroTitle": "Asian German-studies Conference 2026",
       "heroSubtitle": "August 24 - 27, 2026 | Incheon, South Korea",
+      "informationenTitle": "Information",
+      "infoCardAnmeldung": "Registration",
+      "infoCardProgramm": "Program and Sections",
+      "infoCardTagungsort": "Venue",
+      "infoCardRahmenprogramm": "Social Program",
+      "subInfoAnreise": "Arrival and Accommodation",
+      "subInfoLesungen": "Readings",
+      "subInfoFoerdergeber": "Sponsors",
       "themeLabel": "MAIN THEME",
-      "themeTitle": "Benefit and Disadvantage of German Studies in Asia for the Present",
-      "themeDesc": "In a rapidly changing global landscape, this conference examines the dualistic role of German studies in Asia. We explore both the advantages and challenges that the discipline presents to contemporary society and academic discourse.",
+      "themeTitle": "The Benefits and Disadvantages of German Studies in Asia in the Present Day",
+      "themeShortDesc": `In Asia today—and certainly, at least, in Korea—being a Germanist is, by all appearances, a disadvantage. This is partly due to the increasing marginalization of the German language. Not only is English overwhelmingly dominant, but even as a second foreign language in schools, German is in quantitative decline. But the act of language learning itself has also lost significance: Why should one still learn German (of all languages), when everything can be translated in an instant by more-than-competent translation apps?`,
+      "themeFullDesc1":
+        `The situation is even more acute concerning German literature. Compared to digital media, the book as a medium is becoming less and less attractive, especially for the younger generations. And besides: Why should one read Goethe, Musil, or Kafka when we Asians produce our own ‘high literature,’ such as Mo Yan, the Nobel laureate for Literature in 2012, or Han Kang, the Nobel laureate in 2024—not to mention the ‘world conquest’ by popular cultural ‘K-Contents’? Consequently (at least here in Korea), departments for German language and literature are increasingly falling behind. Student placements and professorships are being reduced to expand digital and technical fields of study. Under the dominance of digital technology, German Studies has become ever more ‘untimely’ and finds itself in a crisis.`,
+        "themeFullDesc2":
+        `Nevertheless, being a Germanist in Asia does indeed have its benefits, which paradoxically relates to the very spirit of the age that marginalizes it. Namely, the era so enthusiastic about technology is itself in a crisis, which can be described by the three great ‘K’s—Krieg (War), KI (AI - Artificial Intelligence), and Klimawandel (Climate Change). To name the individual problems associated with these three great ‘K’s: from a political and social perspective, nationalism, the refugee crisis, trauma, the culture of remembrance, and questions of identity; from an economic perspective, digitalization and the techno-utopias of the transhuman, which are linked to AI; finally, from an ecological perspective, the extinction of species, sustainability, and climate change. German Studies (both within Germany and abroad) has always sought to rise to the challenges posed by the complex problems of society, as demonstrated by the main theme of the 2025 IVG (International Association for German Studies) congress in Graz: “Language and Literature in Times of Crisis – Challenges, Tasks, and Opportunities for International German Studies.” And herein lies our benefit in this age suffering from a ‘technology fever.’ For language and literature are the medium for reflection on the problems of the present. Thus, new digital technology also leads to a ‘digital turn’ in language and literature. Examples include digital literature, such as poems generated by AI or published on Twitter, or the integration of AI into language teaching. Language and literature are the site of negotiation and action for these problems, just as Climate Fiction, for example, responds to the climate crisis by configuring reality and motivating the reader to refigure it.`,
+      "themeFullDesc3":
+        `And it is precisely Asian (or international) German Studies that has its opportunity in this time of crisis. On the one hand, the triumphant advance of digital technology is felt more rapidly and extensively here than in Europe. On the other hand, Asian German Studies, standing apart from the tasks of national philology, can be more directed towards the intercultural, international, and transnational aspects of language and literature. The problems that define the present crises can only be solved through inter- or transcultural and transnational communication and cooperation.`,
+      "themeFullDesc4":
+        `Therefore, we, the Asian Germanists, would like to remain ‘untimely’ in the sense that we “act against the times, and thereby on the times, and hopefully for the benefit of a coming future,” wherein Nietzsche, as a classical philologist, saw his reason for existence.`,
+      "themeBtnReadMore": "Read More", // 더 알아보기
+      "themeBtnShowLess": "Show Less", // 간략히 보기
       "aboutTitle": "About the AGT",
       "aboutDesc1": "The Asian German-studies Conference (AGT) is a central forum for German scholars from all over Asia and beyond. Since its foundation in [Founding Year], it has served for academic exchange, networking, and the promotion of young researchers in the field of German language, literature, and culture.",
       "aboutDesc2": "The conference takes place every [Number] years and has been hosted in cities such as [Beijing, Tokyo, Seoul]. It provides a platform to present the latest research findings and to initiate joint projects.",
@@ -102,54 +182,63 @@ export const content = {
       "contactTitle": "Contact",
       "footerCopyright": "© 2026 Asian German-studies Conference Organizing Committee. All Rights Reserved."
     },
-    ko: { // 한국어 (ko)
-      "headerTitle": "AGT  2026",
-      "navAbout": "AGT 소개",
-      "navTheme": "대회 주제",
-      "navPresidentMessage": "회장 인사말",
-      "navRegister": "참가 신청",
-      "navVenue": "행사 장소",
-      "navContact": "연락처",
-      "heroTitle": "아시아 독문학자 대회 2026",
-      "heroSubtitle": "2026년 8월 24일 - 27일 | 대한민국, 인천",
-      "themeLabel": "대회 주제",
-      "themeTitle": "현시대 아시아 독문학의 효용과 폐해",
-      "themeDesc": "빠르게 변화하는 세계 환경 속에서, 이번 학술대회는 아시아 내 독문학의 이중적 역할을 탐구합니다. 우리는 이 학문이 현대 사회와 학술 담론에 제시하는 장점과 도전 과제를 모두 탐색하고자 합니다. \n이번 대회는 독문학의 현재적 의미와 미래 방향을 모색하는 중요한 기회가 될 것입니다. \n참가자들은 최신 연구 결과를 공유하고, 다양한 관점을 나누며, 아시아 독문학의 발전을 위한 새로운 아이디어를 모색할 수 있습니다.",
-      "aboutTitle": "아시아독문학자대회(AGT) 소개",
-      "aboutDesc1": "아시아독문학자대회(AGT)는 아시아 전역과 그 외 지역의 독문학자들을 위한 핵심적인 포럼입니다. [설립 연도]년 창립 이래, 독일어, 문학, 문화 분야의 학술 교류, 네트워크 형성, 신진 연구자 양성을 위해 기여해왔습니다.",
-      "aboutDesc2": "본 학술대회는 [주기]년마다 개최되며, 과거 [베이징, 도쿄, 서울] 등 여러 도시에서 성공적으로 열렸습니다. 최신 연구 성과를 발표하고 공동 프로젝트를 시작하는 중요한 플랫폼을 제공합니다.",
-      "presidentDesc1": "친애하는 동료, 독문학자 여러분,",
-      "presidentDesc2": "제17회 2026년 서울 아시아독문학자대회에 오신 것을 진심으로 환영합니다! 한국독어독문학회(KGG) 회장으로서 이 중요한 행사에 여러분을 맞이하게 되어 매우 특별한 영광입니다. '아시아의 독문학: 전통, 격변, 전망'이라는 주제 아래, 우리 학문의 미래에 대한 고무적인 교류가 우리를 기다리고 있습니다.",
-      "presidentDesc3": "여러분과 함께 영감 넘치는 토론과 잊지 못할 순간들을 기대합니다.",
-      "registerTitle": "참가 신청",
-      "registerType1Title": "1. 분과 책임자",
-      "registerType1Deadline": "신청 마감: 2026년 2월 28일",
-      "registerType1Desc": "분과를 이끌며 학술 프로그램을 적극적으로 만들어나갈 분들의 신청을 기다립니다. 현재 신청 가능합니다.",
-      "registerType1Btn": "신청서 (분과)",
-      "registerType2Title": "2. 발표자",
-      "registerType2Deadline": "신청 마감: 2026년 12월 31일",
-      "registerType2Desc": "연구 성과를 국제적인 청중 앞에서 발표할 기회입니다. Call for Papers는 곧 공지될 예정입니다.",
-      "registerType2Btn": "신청서 (발표)",
-      "registerType3Title": "3. 일반 참가자",
-      "registerType3Deadline": "신청 기간: 현재 ~",
-      "registerType3Desc": "전 세계 동료 연구자들과 토론에 참여하고 교류하며 학문적 영감을 얻어 가시길 바랍니다.",
-      "registerType3Btn": "신청서 (참가)",
-      "registerNote": "* 분과 책임자 및 발표자 역시 일반 참가자 등록을 반드시 해야 합니다.",
-      "venueTitle": "행사 장소 & 프로그램",
-      "venueUniTitle": "인천대학교",
-      "venueUniDesc": "이번 학술대회는 인천대학교의 현대적인 송도 캠퍼스에서 개최됩니다. 최첨단 인프라와 학문과 자연이 어우러진 영감을 주는 환경으로 잘 알려져 있습니다.",
-      "venueProgramTitle": "프로그램 및 분과",
-      "venueProgramDesc": "상세 프로그램은 분과 및 발표 신청이 마감된 후 공지될 예정입니다. 흥미로운 기조 강연, 다채로운 분과, 상호작용적인 워크숍을 기대해 주세요.",
-      "venueSideProgramTitle": "문화 프로그램",
-      "venueSideProgramDesc": "역동적인 도시 인천을 발견해 보세요. 강연장 밖에서도 활발한 교류가 이어질 수 있도록 문화 탐방과 공동 만찬을 계획하고 있습니다.",
-      "teamTitle": "AGT 조직위원회",
-      "teamRole1": "한국독어독문학회 회장",
-      "teamRole2": "사무총장",
-      "teamRole3": "재무 담당",
-      "teamRole4": "프로그램 담당",
-      "teamRole5": "홈페이지 담당",
-      "teamRole6": "조직 담당",
-      "contactTitle": "연락처",
-      "footerCopyright": "© 2026 아시아독문학자대회 조직위원회. All Rights Reserved."
-    }
+//     ko: { // 한국어 (ko)
+//       "headerTitle": "AGT  2026",
+//       "navAbout": "AGT 소개",
+//       "navTheme": "대회 주제",
+//       "navPresidentMessage": "회장 인사말",
+//       "navInfo": "안내",
+//       "navContact": "연락처",
+//       "heroTitle": "아시아 독문학자 대회 2026",
+//       "heroSubtitle": "2026년 8월 24일 - 27일 | 대한민국, 인천",
+//       "informationenTitle": "안내",
+//       "infoCardAnmeldung": "참가 신청",
+//       "infoCardProgramm": "프로그램 및 분과",
+//       "infoCardTagungsort": "행사 장소",
+//       "infoCardRahmenprogramm": "문화 프로그램",
+//       "subInfoAnreise": "오시는 길 및 숙소",
+//       "subInfoLesungen": "저자 초청 강연",
+//       "subInfoFoerdergeber": "후원 기관",
+//       "themeLabel": "대회 주제",
+//       "themeTitle": "현시대 아시아 독문학의 효용과 폐해",
+//       "themeDesc": "빠르게 변화하는 세계 환경 속에서, 이번 학술대회는 아시아 내 독문학의 이중적 역할을 탐구합니다. 우리는 이 학문이 현대 사회와 학술 담론에 제시하는 장점과 도전 과제를 모두 탐색하고자 합니다. 
+// 이번 대회는 독문학의 현재적 의미와 미래 방향을 모색하는 중요한 기회가 될 것입니다. 
+// 참가자들은 최신 연구 결과를 공유하고, 다양한 관점을 나누며, 아시아 독문학의 발전을 위한 새로운 아이디어를 모색할 수 있습니다.",
+//       "aboutTitle": "아시아독문학자대회(AGT) 소개",
+//       "aboutDesc1": "아시아독문학자대회(AGT)는 아시아 전역과 그 외 지역의 독문학자들을 위한 핵심적인 포럼입니다. [설립 연도]년 창립 이래, 독일어, 문학, 문화 분야의 학술 교류, 네트워크 형성, 신진 연구자 양성을 위해 기여해왔습니다.",
+//       "aboutDesc2": "본 학술대회는 [주기]년마다 개최되며, 과거 [베이징, 도쿄, 서울] 등 여러 도시에서 성공적으로 열렸습니다. 최신 연구 성과를 발표하고 공동 프로젝트를 시작하는 중요한 플랫폼을 제공합니다.",
+//       "presidentDesc1": "친애하는 동료, 독문학자 여러분,",
+//       "presidentDesc2": "제17회 2026년 서울 아시아독문학자대회에 오신 것을 진심으로 환영합니다! 한국독어독문학회(KGG) 회장으로서 이 중요한 행사에 여러분을 맞이하게 되어 매우 특별한 영광입니다. '아시아의 독문학: 전통, 격변, 전망'이라는 주제 아래, 우리 학문의 미래에 대한 고무적인 교류가 우리를 기다리고 있습니다.",
+//       "presidentDesc3": "여러분과 함께 영감 넘치는 토론과 잊지 못할 순간들을 기대합니다.",
+//       "registerTitle": "참가 신청",
+//       "registerType1Title": "1. 분과 책임자",
+//       "registerType1Deadline": "신청 마감: 2026년 2월 28일",
+//       "registerType1Desc": "분과를 이끌며 학술 프로그램을 적극적으로 만들어나갈 분들의 신청을 기다립니다. 현재 신청 가능합니다.",
+//       "registerType1Btn": "신청서 (분과)",
+//       "registerType2Title": "2. 발표자",
+//       "registerType2Deadline": "신청 마감: 2026년 12월 31일",
+//       "registerType2Desc": "연구 성과를 국제적인 청중 앞에서 발표할 기회입니다. Call for Papers는 곧 공지될 예정입니다.",
+//       "registerType2Btn": "신청서 (발표)",
+//       "registerType3Title": "3. 일반 참가자",
+//       "registerType3Deadline": "신청 기간: 현재 ~",
+//       "registerType3Desc": "전 세계 동료 연구자들과 토론에 참여하고 교류하며 학문적 영감을 얻어 가시길 바랍니다.",
+//       "registerType3Btn": "신청서 (참가)",
+//       "registerNote": "* 분과 책임자 및 발표자 역시 일반 참가자 등록을 반드시 해야 합니다.",
+//       "venueTitle": "행사 장소 & 프로그램",
+//       "venueUniTitle": "인천대학교",
+//       "venueUniDesc": "이번 학술대회는 인천대학교의 현대적인 송도 캠퍼스에서 개최됩니다. 최첨단 인프라와 학문과 자연이 어우러진 영감을 주는 환경으로 잘 알려져 있습니다.",
+//       "venueProgramTitle": "프로그램 및 분과",
+//       "venueProgramDesc": "상세 프로그램은 분과 및 발표 신청이 마감된 후 공지될 예정입니다. 흥미로운 기조 강연, 다채로운 분과, 상호작용적인 워크숍을 기대해 주세요.",
+//       "venueSideProgramTitle": "문화 프로그램",
+//       "venueSideProgramDesc": "역동적인 도시 인천을 발견해 보세요. 강연장 밖에서도 활발한 교류가 이어질 수 있도록 문화 탐방과 공동 만찬을 계획하고 있습니다.",
+//       "teamTitle": "AGT 조직위원회",
+//       "teamRole1": "한국독어독문학회 회장",
+//       "teamRole2": "사무총장",
+//       "teamRole3": "재무 담당",
+//       "teamRole4": "프로그램 담당",
+//       "teamRole5": "홈페이지 담당",
+//       "teamRole6": "조직 담당",
+//       "contactTitle": "연락처",
+//       "footerCopyright": "© 2026 아시아독문학자대회 조직위원회. All Rights Reserved."
+//     }
 };

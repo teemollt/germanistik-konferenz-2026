@@ -1,39 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import HeroSection from '../components/HeroSection.astro';
-import ThemeSection from '../components/ThemeSection.astro';
-
-import InformationenSection from '../components/InformationenSection.astro';
-import TeamSection from '../components/TeamSection.astro';
 import Footer from '../components/Footer.astro';
 import { content } from '../i18n/content';
-
 ---
 
-<Layout title="AGT 2026 Incheon (Final Prototype)">
-	<Header />
-	<main class="relative z-30">
-		<HeroSection />
-		
-		<ThemeSection />
-		<InformationenSection />
-		<TeamSection />
-	</main>
-	<Footer />
+<Layout title="Über AGT - AGT 2026 Incheon">
+    <Header />
+    <main class="relative z-30 py-20 md:py-24">
+        <section id="about" class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 md:mb-16" data-lang-key="aboutTitle">Über AGT</h2>
+            <div class="max-w-4xl mx-auto text-slate-300 text-lg leading-relaxed space-y-6">
+                <p data-lang-key="aboutDesc1">Die Asiatische Germanistentagung (AGT) ist ein zentrales Forum für Germanistinnen und Germanisten aus ganz Asien und darüber hinaus. Seit ihrer Gründung dient sie dem wissenschaftlichen Austausch, der Vernetzung und der Förderung des Nachwuchses im Bereich der deutschen Sprache, Literatur und Kultur.</p>
+                <p data-lang-key="aboutDesc2">(Hier wird die zusammengefasste Geschichte der AGT basierend auf den bereitgestellten Materialien eingefügt. Zum Beispiel: Gründungsjahr, wichtige Konferenzorte, Ziele der Gesellschaft.)</p>
+            </div>
+        </section>
+    </main>
+    <Footer />
 </Layout>
 
 <script is:inline define:vars={{ content }}>
     document.addEventListener('DOMContentLoaded', () => {
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-
         const langButtons = {
             de: [document.getElementById('lang-de-desktop'), document.getElementById('lang-de-mobile')],
             en: [document.getElementById('lang-en-desktop'), document.getElementById('lang-en-mobile')],
@@ -68,20 +55,20 @@ import { content } from '../i18n/content';
                 });
             }
         });
-        
-        // Close mobile menu when a link is clicked
-        if (mobileMenu) {
-            const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
-            if (mobileMenuLinks) {
-                mobileMenuLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
-                    });
-                });
-            }
-        }
 
         // Set German as the default language on initial load
         updateLanguage('de');
+
+         // ID를 이용해 모바일 메뉴 버튼과 메뉴 패널을 찾습니다.
+         const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // 두 요소가 모두 존재할 경우에만 클릭 이벤트를 추가합니다.
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                // 'hidden' 클래스를 껐다 켰다 하면서 메뉴를 보이거나 숨깁니다.
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
     });
 </script>

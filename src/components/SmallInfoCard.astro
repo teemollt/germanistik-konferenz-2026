@@ -1,0 +1,17 @@
+---
+interface Props {
+  title: string;
+  href: string;
+  icon: string; // Path to the SVG icon
+  langKey: string;
+}
+
+const { title, href, icon, langKey } = Astro.props;
+---
+
+<a href={href} class="block bg-gray-800/70 backdrop-blur-sm p-6 rounded-lg shadow-md hover:bg-gray-700/90 transition-colors duration-300">
+  <div class="flex items-center space-x-4">
+    <img src={icon} alt="" class="h-8 w-8" />
+    <h4 class="text-lg font-semibold text-slate-200" data-lang-key={langKey}>{title}</h4>
+  </div>
+</a>
