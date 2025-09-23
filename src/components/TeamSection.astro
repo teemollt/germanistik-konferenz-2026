@@ -1,19 +1,56 @@
 
+<script>
+  import { content } from '../i18n/content';
+
+  // Function to update content based on language
+  function updateContent(language) {
+    const langContent = content[language];
+
+    // Loop through all elements with data-lang-key attribute
+    document.querySelectorAll('[data-lang-key]').forEach(element => {
+      const key = element.getAttribute('data-lang-key');
+      if (langContent[key]) {
+        element.innerHTML = langContent[key];
+      }
+    });
+
+    // Update team members
+    const teamGrid = document.getElementById('team-grid');
+    teamGrid.innerHTML = ''; // Clear existing team members
+    langContent.teamMembers.forEach(member => {
+      const memberDiv = document.createElement('div');
+      memberDiv.innerHTML = `<p class="font-bold text-white">${member.name}</p><p class="text-sm text-slate-400">${member.role}<br>${member.institution}</p>`;
+      teamGrid.appendChild(memberDiv);
+    });
+  }
+
+  // Set initial language based on browser language or default to 'de'
+  let currentLanguage = navigator.language.split('-')[0] || 'de';
+  if (!content[currentLanguage]) {
+    currentLanguage = 'de'; // Fallback to German if browser language is not supported
+  }
+  updateContent(currentLanguage);
+
+  // Language switcher logic (assuming you have buttons with data-lang attribute)
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-lang]').forEach(button => {
+      button.addEventListener('click', () => {
+        const lang = button.getAttribute('data-lang');
+        updateContent(lang);
+      });
+    });
+  });
+</script>
+
 <section id="contact" class="py-20 md:py-24 bg-[#14223f]">
     <div class="container mx-auto px-6" data-aos="fade-up">
         <div class="text-center mb-16 border-b border-slate-700 pb-8">
             <h2 class="section-title" data-lang-key="contactTitle">Kontakt</h2>
-            <p class="text-slate-300 text-lg">agt2027.incheon@email.com</p>
+            <p class="text-slate-300 text-lg" data-lang-key="contactEmail">agt2027.incheon@email.com</p>
         </div>
         <p class="font-bold text-white text-center text-xl mb-6" data-lang-key="teamTitle">AGT-Organisationsteam</p>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center">
-            <div><p class="font-bold text-white">KANG, Chang-Uh</p><p class="text-sm text-slate-400">Prof. Dr. phil.<br>Seoul National University</p></div>
-            <div><p class="font-bold text-white">SHIN, Jiyoung</p><p class="text-sm text-slate-400">Prof. Dr. phil<br>Korea University</p></div>
-            <div><p class="font-bold text-white">KIM, Kyong</p><p class="text-sm text-slate-400">Assoz. Prof. Dr. Phil.<br>Pusan National University</p></div>
-            <div><p class="font-bold text-white">MOK, Seong-Sook</p><p class="text-sm text-slate-400">Assoz. Prof. Dr. phil.<br>Incheon National University</p></div>
-            <div><p class="font-bold text-white">CHOI, Garam</p><p class="text-sm text-slate-400">Dozentin Dr. Phil.<br>Seoul National University</p></div>
-            <div><p class="font-bold text-white">KIM, Yeon Soo</p><p class="text-sm text-slate-400">Assoz. Prof. Dr. Phil.<br>Kangwon National University</p></div>
-            <div><p class="font-bold text-white">Hyowon Cho</p><p class="text-sm text-slate-400">Assist. Prof. Dr. Phil.<br>Yonsei University</p></div>
+        <div id="team-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center">
+            <!-- Team members will be dynamically inserted here -->
         </div>
     </div>
 </section>

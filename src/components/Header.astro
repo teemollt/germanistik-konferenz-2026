@@ -7,13 +7,13 @@ const getLink = (id: string) => {
     return isHomePage ? `#${id}` : `${base}#${id}`;
 }
 ---
-<header class="bg-[#192A4D]/70 backdrop-blur-lg sticky top-0 z-50">
+<header class="bg-slate-800/60 backdrop-blur-lg sticky top-0 z-50">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
         <div class="flex items-center gap-3 md:gap-4">
             <!-- 인천대 로고 그룹 -->
-            <div class="flex items-end gap-2">
+            <div class="flex items-center gap-2">
                 <a href="https://www.inu.ac.kr/" target="_blank" rel="noopener noreferrer" title="Incheon National University Homepage">
-                    <img src="/photos/inulogo.svg" alt="Incheon National University Logo" class="h-8 w-auto">
+                    <img src="/photos/inulogo.svg" alt="Incheon National University Logo" class="h-10 w-auto drop-shadow-[0_0_5px_rgba(255,255,255,0.6)] filter invert brightness-200">
                 </a>
             </div>
         </div>
@@ -26,9 +26,9 @@ const getLink = (id: string) => {
             <a href={getLink('informationen')} class="nav-link" data-lang-key="navInfo">Informationen</a>
             <a href={getLink('contact')} class="nav-link" data-lang-key="navContact">Kontakt</a>
             <div class="lang-switcher text-sm font-medium ml-6">
-                <button id="lang-de-desktop" class="p-1">Deutsch</button>
+                <button id="lang-de-desktop" data-lang="de" class="p-1">Deutsch</button>
                 <span class="text-slate-500">|</span>
-                <button id="lang-en-desktop" class="p-1">Englisch</button>
+                <button id="lang-en-desktop" data-lang="en" class="p-1">Englisch</button>
             </div>
         </nav>
 
@@ -48,9 +48,9 @@ const getLink = (id: string) => {
             <a href={getLink('contact')} class="nav-link block py-2" data-lang-key="navContact">Kontakt</a>
         </nav>
         <div class="lang-switcher text-center border-t border-slate-700 py-4">
-            <button id="lang-de-mobile" class="p-1">Deutsch</button>
+            <button id="lang-de-mobile" data-lang="de" class="p-1">Deutsch</button>
             <span class="text-slate-500">|</span>
-            <button id="lang-en-mobile" class="p-1">Englisch</button>
+            <button id="lang-en-mobile" data-lang="en" class="p-1">Englisch</button>
         </div>
     </div>
 </header>
