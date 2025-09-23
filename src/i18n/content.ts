@@ -3,7 +3,7 @@ export const content = {
       "headerTitle": "AGT  2027",
       "navAbout": "Über AGT",
       "navPresidentMessage": "Grußwort",
-      "navTheme": "Themenbeschreibung",
+      "navTheme": "Generalthema",
       "navInfo": "Informationen",
       "navContact": "Kontakt",
       "heroTitle": "Asiatische Germanistentagung 2027",
@@ -16,7 +16,7 @@ export const content = {
       "subInfoAnreise": "Anreise und Unterkunft",
       "subInfoLesungen": "Lesungen",
       "subInfoFoerdergeber": "Fördergeber",
-      "themeLabel": "Themenbeschreibung",
+      "themeLabel": "Generalthema",
       "themeTitle": "Nutzen und Nachteil der Germanistik in Asien für die Gegenwart",
       "themeShortDesc": `In Asien – mit Sicherheit aber zumindest in Korea – ist, heutzutage Germanist zu sein,
       allem Anschein nach ein Nachteil. Das hat zum einen mit der zunehmenden
