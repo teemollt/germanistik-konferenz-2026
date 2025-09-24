@@ -3,30 +3,386 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { content } from '../../i18n/content';
+
+// 버스 정보 데이터
+const busesViaINUStation = [
+  {
+    number: "8, 8A",
+    type: "trunk",
+    finalStop: "Incheon National University College of Engineering ↔ Songnae Station Nambu",
+    intermediate: "Incheon City Hall, Incheon National University Station"
+  },
+  {
+    number: "58",
+    type: "trunk", 
+    finalStop: "Juan Station Transfer Bus Stop ↔ Songdo 2nd Announcement",
+    intermediate: "Incheon National University Station, Juan Station, Incheon National University Main Gate"
+  },
+  {
+    number: "41",
+    type: "circular",
+    finalStop: "Sinjeong Middle School",
+    intermediate: "BIT Zone Station, Incheon National University Station, IncheonUniv. Songdo Campus"
+  },
+  {
+    number: "46", 
+    type: "circular",
+    finalStop: "College of Engineering, Incheon National University ↔ Dongnam Apartment(Mujigae Apartment)",
+    intermediate: "Central Park Station, Incheon National University Station, IncheonUniv. Songdo Campus"
+  },
+  {
+    number: "3002",
+    type: "express",
+    finalStop: "College of Engineering, Incheon National University ↔ KTX Gwangmyeong Station Exit 6", 
+    intermediate: "Incheon National University Station, Incheon National University Main Gate, KTX Gwangmyeong Station Exit 6"
+  }
+];
+
+const busesViaCampus = [
+  {
+    number: "6, 6-1",
+    type: "trunk",
+    finalStop: "Songdo Public Garage ↔ Namdong Sports Center",
+    intermediate: "College of Natural Sciences, Incheon National University, Seonhak Station"
+  },
+  {
+    number: "43",
+    type: "circular", 
+    finalStop: "Songdo Sports Center(LNGBaseball Field) ↔ Songdo Public Garage",
+    intermediate: "Int'l Business District Station, Technopark Station, Incheon National University Main Gate"
+  },
+  {
+    number: "1301",
+    type: "metro-express",
+    finalStop: "Yeongdeungpo Tax Office, Seonyoo High School ↔ Songdo Public Garage",
+    intermediate: "Sinjungdong Station Exit 5 / Jungheung Middle School, College of Natural Sciences, Incheon National University"
+  },
+  {
+    number: "M6405",
+    type: "metro-rapid",
+    finalStop: "Gangnam Station, Seocho Hyundai Tower ↔ College of Engineering, Incheon National University",
+    intermediate: "Seoul Nat'l Univ. of Education station, College of Engineering, Incheon National University, Central Park Station"
+  }
+];
+
+const outsideRoutes = [
+  {
+    titleKey: "venueFromIncheonAirport",
+    title: "From Incheon International Airport",
+    route: "Airport → Airport Railroad → Transfer at various stations → Incheon National University"
+  },
+  {
+    titleKey: "venueFromGimpoAirport", 
+    title: "From Gimpo International Airport",
+    route: "Gimpo Airport → Subway Line 5/9 → Transfer → Incheon Line 1 → Incheon Nat'l Univ. Station"
+  },
+  {
+    titleKey: "venueFromSeoulStation",
+    title: "From Seoul Station", 
+    route: "Seoul Station → Subway Line 1 → Bupyeong Station → Incheon Line 1 → Incheon Nat'l Univ. Station"
+  },
+  {
+    titleKey: "venueFromYongsanStation",
+    title: "From Yongsan Station",
+    route: "Yongsan → Subway Line 1 → Transfer at Bupyeong → Incheon Line 1 → Incheon Nat'l Univ. Station"
+  },
+  {
+    titleKey: "venueFromGwangmyeongStation", 
+    title: "From Gwangmyeong Station",
+    route: "KTX Gwangmyeong → Express Bus 3002 → Incheon National University"
+  },
+  {
+    titleKey: "venueFromIncheonBusTerminal",
+    title: "From Incheon Bus Terminal", 
+    route: "Incheon Bus Terminal → Local Bus → Incheon Nat'l Univ. Station → Campus Shuttle"
+  }
+];
+
+// 버스 타입별 색상 반환 함수
+function getBusColor(type) {
+  const colors = {
+    'trunk': 'trunk',
+    'circular': 'circular', 
+    'express': 'express',
+    'metro-express': 'metro-express',
+    'metro-rapid': 'metro-rapid'
+  };
+  return colors[type] || 'trunk';
+}
 ---
 
-<Layout title="Tagungsort - AGT 2026 Incheon">
+<Layout title="Directions - AGT 2027 Incheon">
     <Header />
     <main class="relative z-30 py-20 md:py-24">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-            <div>
-                <h2 class="text-4xl md:text-5xl font-extrabold mb-8" data-lang-key="venueTitle">Tagungsort</h2>
-                <div class="space-y-6 text-lg">
+        <!-- 상단 소개 섹션 -->
+        <section id="venue-intro" class="container mx-auto px-6 mb-16">
+            <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                <div data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl font-extrabold mb-8" data-lang-key="directionsTitle">Directions</h1>
+                    <div class="space-y-6 text-lg">
+                        <div>
+                            <h2 class="font-bold text-white text-2xl mb-4" data-lang-key="venueUniTitle">Incheon National University</h2>
+                            <p class="text-slate-300 mb-4" data-lang-key="venueUniDesc">Songdo Campus - A modern campus that unites science and nature.</p>
+                            <div class="bg-slate-800/50 rounded-lg p-4 border border-slate-700">
+                                <h3 class="font-semibold text-amber-400 mb-2">Campus Address</h3>
+                                <p class="text-slate-300">119 Academy-ro, Yeonsu-gu, Incheon, South Korea</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <img src="https://www.inu.ac.kr/sites/global/images/temp_1744330716193100.jpg" alt="Incheon University Campus" class="rounded-lg shadow-2xl w-full h-auto">
+                </div>
+            </div>
+        </section>
+
+        <!-- 메인 길안내 섹션 -->
+        <section id="directions-content" class="container mx-auto px-6">
+            <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-lang-key="directionsSubtitle">How to Get to Songdo Campus</h2>
+                <p class="text-lg text-slate-300">Choose your starting point and find the best route to the university</p>
+            </div>
+
+            <!-- 탭 네비게이션 -->
+            <div class="flex justify-center border-b border-slate-700 mb-12" data-aos="fade-up">
+                <button data-tab="from-outside" class="tab-btn active px-6 py-3 text-lg font-semibold border-b-2" data-lang-key="venueTab1">From Outside the City</button>
+                <button data-tab="from-downtown" class="tab-btn px-6 py-3 text-lg font-semibold border-b-2" data-lang-key="venueTab2">From Downtown</button>
+            </div>
+
+            <!-- 시외 교통편 탭 -->
+            <div id="from-outside" class="tab-content">
+                <div class="grid gap-6 mb-12" data-aos="fade-up">
+                    {outsideRoutes.map((route, index) => (
+                        <div class="route-card bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+                            <h3 class="text-xl font-bold text-amber-400 mb-3">{route.title}</h3>
+                            <div class="flex items-center gap-4 text-slate-300">
+                                <span class="text-2xl">🚌</span>
+                                <p>{route.route}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            <!-- 시내 교통편 탭 -->
+            <div id="from-downtown" class="tab-content hidden">
+                <!-- 지하철 정보 박스 -->
+                <div class="info-box bg-slate-800/30 rounded-lg p-6 mb-12 border border-slate-700" data-aos="fade-up">
+                    <h3 class="text-2xl font-bold text-white mb-6 border-b border-slate-600 pb-4">
+                        <span class="text-amber-400">📍</span> Incheon National University Station Guide
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-8 items-start">
+                        <div>
+                            <div class="bg-slate-700/50 rounded-lg p-6 mb-6">
+                                <h4 class="font-bold text-amber-400 mb-3 flex items-center gap-2">
+                                    <span>🚇</span> Subway Exit Guide
+                                </h4>
+                                <p class="text-slate-300 mb-4">Incheon Line 1, Incheon Nat'l Univ. Station</p>
+                                <div class="flex gap-2">
+                                    <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold">Exit 1</span>
+                                    <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold">Exit 2</span>
+                                </div>
+                            </div>
+                            <div class="bg-slate-700/50 rounded-lg p-6">
+                                <h4 class="font-bold text-amber-400 mb-3 flex items-center gap-2">
+                                    <span>🚌</span> Bus Information
+                                </h4>
+                                <div class="space-y-2 text-sm">
+                                    <p><span class="text-blue-400 font-semibold">School Shuttle Bus</span></p>
+                                    <p><span class="text-green-400 font-semibold">Trunk Buses:</span> 8, 8A, 58</p>
+                                    <p><span class="text-purple-400 font-semibold">Circular Buses:</span> 41, 46</p>
+                                    <p><span class="text-red-400 font-semibold">Direct Bus:</span> 3002</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center">
+                            <div class="subway-map bg-slate-700 rounded-lg p-6 w-full max-w-xs">
+                                <div class="text-center mb-4">
+                                    <h5 class="font-bold text-white">Station Layout</h5>
+                                </div>
+                                <div class="relative">
+                                    <div class="bg-blue-500 h-2 rounded-full mb-4"></div>
+                                    <div class="flex justify-between">
+                                        <div class="bg-amber-400 w-8 h-8 rounded-full flex items-center justify-center text-black font-bold text-sm">1</div>
+                                        <div class="bg-amber-400 w-8 h-8 rounded-full flex items-center justify-center text-black font-bold text-sm">2</div>
+                                    </div>
+                                    <div class="text-center mt-2 text-xs text-slate-300">Incheon Line 1</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 버스 경로 테이블들 -->
+                <div class="space-y-12" data-aos="fade-up">
+                    <!-- 인천대입구역 경유 버스 -->
                     <div>
-                        <h3 class="font-bold text-white text-2xl" data-lang-key="venueUniTitle">Incheon National University</h3>
-                        <p class="text-slate-300" data-lang-key="venueUniDesc">Ein moderner Campus, der Wissenschaft und Natur vereint. Der ideale Ort für inspirierende Diskussionen.</p>
+                        <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                            <span class="text-blue-400">🚌</span>
+                            Buses via Incheon Nat'l Univ. Station
+                        </h3>
+                        <div class="overflow-x-auto rounded-lg border border-slate-700">
+                            <table class="w-full bg-slate-800">
+                                <thead class="bg-slate-700">
+                                    <tr>
+                                        <th class="p-4 text-left font-semibold text-slate-200">Bus Number</th>
+                                        <th class="p-4 text-left font-semibold text-slate-200">Final Stop</th>
+                                        <th class="p-4 text-left font-semibold text-slate-200">Intermediate Stop</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {busesViaINUStation.map((bus, index) => (
+                                        <tr class={`border-b border-slate-700 ${index % 2 === 0 ? 'bg-slate-800' : 'bg-slate-750'}`}>
+                                            <td class="p-4">
+                                                <div class="flex items-center gap-2">
+                                                    <span class={`bus-badge ${getBusColor(bus.type)}`}>{bus.number}</span>
+                                                </div>
+                                            </td>
+                                            <td class="p-4 text-slate-300 text-sm">{bus.finalStop}</td>
+                                            <td class="p-4 text-slate-300 text-sm">{bus.intermediate}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 송도캠퍼스 경유 버스 -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                            <span class="text-green-400">🚌</span>
+                            Buses via Songdo Campus
+                        </h3>
+                        <div class="overflow-x-auto rounded-lg border border-slate-700">
+                            <table class="w-full bg-slate-800">
+                                <thead class="bg-slate-700">
+                                    <tr>
+                                        <th class="p-4 text-left font-semibold text-slate-200">Bus Number</th>
+                                        <th class="p-4 text-left font-semibold text-slate-200">Final Stop</th>
+                                        <th class="p-4 text-left font-semibold text-slate-200">Intermediate Stop</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {busesViaCampus.map((bus, index) => (
+                                        <tr class={`border-b border-slate-700 ${index % 2 === 0 ? 'bg-slate-800' : 'bg-slate-750'}`}>
+                                            <td class="p-4">
+                                                <div class="flex items-center gap-2">
+                                                    <span class={`bus-badge ${getBusColor(bus.type)}`}>{bus.number}</span>
+                                                </div>
+                                            </td>
+                                            <td class="p-4 text-slate-300 text-sm">{bus.finalStop}</td>
+                                            <td class="p-4 text-slate-300 text-sm">{bus.intermediate}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 추가 정보 -->
+                <div class="mt-12 grid md:grid-cols-2 gap-8" data-aos="fade-up">
+                    <div class="bg-blue-900/20 rounded-lg p-6 border border-blue-700/50">
+                        <h4 class="font-bold text-blue-400 mb-3 flex items-center gap-2">
+                            <span>💡</span> Pro Tips
+                        </h4>
+                        <ul class="text-slate-300 space-y-2 text-sm">
+                            <li>• Use T-money or WOWPASS card for convenient payment</li>
+                            <li>• Check real-time bus arrival via mobile apps</li>
+                            <li>• Campus shuttle runs every 15-20 minutes</li>
+                            <li>• Allow extra time during rush hours (7-9 AM, 5-7 PM)</li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-900/20 rounded-lg p-6 border border-green-700/50">
+                        <h4 class="font-bold text-green-400 mb-3 flex items-center gap-2">
+                            <span>🕐</span> Operating Hours
+                        </h4>
+                        <ul class="text-slate-300 space-y-2 text-sm">
+                            <li>• <strong>Subway:</strong> 5:30 AM - 11:30 PM</li>
+                            <li>• <strong>City Buses:</strong> 5:00 AM - 11:00 PM</li>
+                            <li>• <strong>Express Buses:</strong> 6:00 AM - 10:00 PM</li>
+                            <li>• <strong>Campus Shuttle:</strong> 7:00 AM - 6:00 PM</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div>
-                <img src="https://www.inu.ac.kr/sites/global/images/temp_1744330716193100.jpg" alt="Incheon University Campus" class="rounded-lg shadow-2xl w-full h-auto">
-            </div>
-        </div>
+        </section>
     </main>
     <Footer />
 </Layout>
-<script is:inline define:vars={{ content }}>
+
+<style>
+    .tab-btn {
+        transition: all 0.3s ease;
+        color: #94A3B8;
+        border-bottom-color: transparent;
+    }
+    
+    .tab-btn:hover {
+        color: #E2E8F0;
+    }
+    
+    .tab-btn.active {
+        color: #FBBF24;
+        border-bottom-color: #FBBF24;
+    }
+    
+    .route-card {
+        transition: all 0.3s ease;
+    }
+    
+    .route-card:hover {
+        background-color: rgba(30, 41, 59, 0.7);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+    
+    .bus-badge {
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-weight: 700;
+        font-size: 0.875rem;
+        font-family: monospace;
+    }
+    
+    .trunk { background-color: #3B82F6; color: white; }
+    .circular { background-color: #10B981; color: white; }
+    .express { background-color: #EF4444; color: white; }
+    .metro-express { background-color: #8B5CF6; color: white; }
+    .metro-rapid { background-color: #F59E0B; color: black; }
+    
+    .subway-map {
+        min-height: 200px;
+    }
+    
+    .info-box {
+        backdrop-filter: blur(10px);
+    }
+    
+    tbody tr:hover {
+        background-color: rgba(51, 65, 85, 0.8);
+    }
+    
+    @media (max-width: 768px) {
+        .tab-btn {
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+        }
+        
+        table {
+            font-size: 0.875rem;
+        }
+        
+        .bus-badge {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+        }
+    }
+</style>
+
+<script define:vars={{ content }}>
     document.addEventListener('DOMContentLoaded', () => {
+        // 언어 변경 기능
         const langButtons = {
             de: [document.getElementById('lang-de-desktop'), document.getElementById('lang-de-mobile')],
             en: [document.getElementById('lang-en-desktop'), document.getElementById('lang-en-mobile')],
@@ -62,19 +418,42 @@ import { content } from '../../i18n/content';
             }
         });
 
-        // Set German as the default language on initial load
-        updateLanguage('de');
+        // 탭 기능
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
 
-         // ID를 이용해 모바일 메뉴 버튼과 메뉴 패널을 찾습니다.
-         const mobileMenuButton = document.getElementById('mobile-menu-button');
+        if (tabButtons.length > 0 && tabContents.length > 0) {
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // 모든 탭 버튼에서 active 클래스 제거
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    // 클릭된 버튼에 active 클래스 추가
+                    button.classList.add('active');
+
+                    // 해당 탭 컨텐츠 표시
+                    const tabId = button.getAttribute('data-tab');
+                    tabContents.forEach(content => {
+                        if (content.id === tabId) {
+                            content.classList.remove('hidden');
+                        } else {
+                            content.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        }
+
+        // 모바일 메뉴 기능  
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
-        // 두 요소가 모두 존재할 경우에만 클릭 이벤트를 추가합니다.
         if (mobileMenuButton && mobileMenu) {
             mobileMenuButton.addEventListener('click', () => {
-                // 'hidden' 클래스를 껐다 켰다 하면서 메뉴를 보이거나 숨깁니다.
                 mobileMenu.classList.toggle('hidden');
             });
         }
+
+        // 기본 언어 설정
+        updateLanguage('en');
     });
 </script>
