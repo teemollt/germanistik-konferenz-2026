@@ -5,26 +5,31 @@ import Footer from '../components/Footer.astro';
 import { content } from '../i18n/content';
 ---
 
-<Layout title="Über AGT - AGT 2026 Incheon">
+<Layout title="Über die AGT - AGT 2027 Incheon">
     <Header />
     <main class="relative z-30 py-20 md:py-24">
         <section id="about" class="container mx-auto px-6">
             <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 md:mb-16" data-lang-key="aboutTitle">Über AGT</h2>
             <div class="max-w-4xl mx-auto text-slate-300 text-lg leading-relaxed space-y-6">
-                <p data-lang-key="aboutDesc1">Die Asiatische Germanistentagung (AGT) ist ein zentrales Forum für Germanistinnen und Germanisten aus ganz Asien und darüber hinaus. Seit ihrer Gründung dient sie dem wissenschaftlichen Austausch, der Vernetzung und der Förderung des Nachwuchses im Bereich der deutschen Sprache, Literatur und Kultur.</p>
-                <p data-lang-key="aboutDesc2">(Hier wird die zusammengefasste Geschichte der AGT basierend auf den bereitgestellten Materialien eingefügt. Zum Beispiel: Gründungsjahr, wichtige Konferenzorte, Ziele der Gesellschaft.)</p>
+                <p data-lang-key="aboutP1"></p>
+                <p data-lang-key="aboutP2"></p>
+
+                <ul class="list-disc list-inside space-y-2 pl-4" data-lang-key-list="aboutConferenceList">
+                </ul>
+
+                <p data-lang-key="aboutP3"></p>
+                <p data-lang-key="aboutP4"></p>
             </div>
         </section>
     </main>
     <Footer />
 </Layout>
 
-<script is:inline define:vars={{ content }}>
+<!-- <script is:inline define:vars={{ content }}>
     document.addEventListener('DOMContentLoaded', () => {
         const langButtons = {
             de: [document.getElementById('lang-de-desktop'), document.getElementById('lang-de-mobile')],
-            en: [document.getElementById('lang-en-desktop'), document.getElementById('lang-en-mobile')],
-            ko: [document.getElementById('lang-ko-desktop'), document.getElementById('lang-ko-mobile')]
+            en: [document.getElementById('lang-en-desktop'), document.getElementById('lang-en-mobile')]
         };
 
         const updateLanguage = (lang) => {
@@ -46,6 +51,18 @@ import { content } from '../i18n/content';
                     if (button) button.classList.add('active')
                 });
             }
+
+                           document.querySelectorAll('[data-lang-key-list]').forEach(ul => {
+                    const key = ul.getAttribute('data-lang-key-list');
+                    if (langContent[key] && Array.isArray(langContent[key])) {
+                        ul.innerHTML = ''; // 기존 목록 비우기
+                        langContent[key].forEach(itemText => {
+                            const li = document.createElement('li');
+                            li.textContent = itemText;
+                            ul.appendChild(li);
+                        });
+                    }
+                });
         };
 
         Object.keys(langButtons).forEach(lang => {
@@ -60,7 +77,7 @@ import { content } from '../i18n/content';
         updateLanguage('de');
 
          // ID를 이용해 모바일 메뉴 버튼과 메뉴 패널을 찾습니다.
-         const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
         // 두 요소가 모두 존재할 경우에만 클릭 이벤트를 추가합니다.
@@ -71,4 +88,4 @@ import { content } from '../i18n/content';
             });
         }
     });
-</script>
+</script> -->

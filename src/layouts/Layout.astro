@@ -1,14 +1,14 @@
 ---
 import '../styles/global.css';
 import 'aos/dist/aos.css';
+import { content } from '../i18n/content';
 
 export interface Props {
-	title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
 ---
-
 <!DOCTYPE html>
 <html lang="de" class="scroll-smooth">
 <head>
@@ -17,16 +17,71 @@ const { title } = Astro.props;
     <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;5500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- ▼▼▼ 1. AOS 라이브러리 파일을 여기서 불러옵니다 ▼▼▼ -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body class="overflow-x-hidden">
     <slot />
-    <script>
-        import AOS from 'aos';
-        AOS.init({
-            duration: 800,
-            once: true,
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script is:inline define:vars={{ content }}>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (typeof AOS !== 'undefined') {
+          AOS.init({ duration: 800, once: true });
+        }
+  
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.onclick = () => mobileMenu.classList.toggle('hidden');
+          mobileMenu.querySelectorAll('a').forEach(link => {
+            link.onclick = () => mobileMenu.classList.add('hidden');
+          });
+        }
+  
+        const langButtons = {
+          de: [document.getElementById('lang-de-desktop'), document.getElementById('lang-de-mobile')],
+          en: [document.getElementById('lang-en-desktop'), document.getElementById('lang-en-mobile')],
+        };
+  
+        const updateLanguage = (lang) => {
+          if (!content[lang]) return;
+          document.documentElement.lang = lang;
+          const langContent = content[lang];
+  
+          document.querySelectorAll('[data-lang-key]').forEach(el => {
+            const key = el.getAttribute('data-lang-key');
+            if (langContent[key] !== undefined) el.innerHTML = langContent[key];
+          });
+  
+          document.querySelectorAll('[data-lang-key-list]').forEach(ul => {
+            const key = ul.getAttribute('data-lang-key-list');
+            if (langContent[key] && Array.isArray(langContent[key])) {
+              ul.innerHTML = '';
+              langContent[key].forEach(itemText => {
+                const li = document.createElement('li');
+                li.textContent = itemText;
+                ul.appendChild(li);
+              });
+            }
+          });
+  
+          Object.values(langButtons).forEach(buttons => {
+            if (buttons) buttons.forEach(button => button?.classList.remove('active'));
+          });
+          langButtons[lang]?.forEach(button => button?.classList.add('active'));
+        };
+  
+        Object.keys(langButtons).forEach(lang => {
+          langButtons[lang]?.forEach(button => {
+            if (button) button.onclick = () => updateLanguage(lang);
+          });
         });
+  
+        updateLanguage(document.documentElement.lang || 'de');
+      });
     </script>
 </body>
 </html>

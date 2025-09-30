@@ -1,7 +1,7 @@
 export const content = {
     de: { // 독일어 (de)
       "headerTitle": "AGT  2027",
-      "navAbout": "Über AGT",
+      "navAbout": "Über die AGT",
       "navPresidentMessage": "Grußwort",
       "navTheme": "Generalthema",
       "navInfo": "Informationen",
@@ -75,9 +75,22 @@ export const content = {
         Existenzberechtigung gesehen hat.`,
       "themeBtnReadMore": "Mehr erfahren", // 더 알아보기
       "themeBtnShowLess": "Weniger anzeigen", // 간략히 보기
-      "aboutTitle": "Über AGT",
-      "aboutDesc1": "Die Asiatische Germanistentagung (AGT) ist ein zentrales Forum für Germanistinnen und Germanisten aus ganz Asien und darüber hinaus. Seit ihrer Gründung im Jahr [Gründungsjahr einfügen] dient sie dem wissenschaftlichen Austausch, der Vernetzung und der Förderung des Nachwuchses im Bereich der deutschen Sprache, Literatur und Kultur.",
-      "aboutDesc2": "Die Tagung findet alle [Turnus einfügen] Jahre statt und wurde bereits in Städten wie [Peking, Tokio, Seoul] ausgerichtet. Sie bietet eine Plattform, um neueste Forschungsergebnisse zu präsentieren und gemeinsame Projekte zu initiieren.",
+      "aboutTitle": "Über die AGT",
+      "aboutP1": `Die Asiatische Germanistentagung wurde, auch wenn sie sich damals noch nicht so genannt hat, im August 1991 begründet, als die Japanische Gesellschaft für Germanistik für die drei ostasiatischen Länder Japan, China und Korea ein Symposium in Berlin zum Thema ‚Deutsche Literatur und Sprache aus ostasiatischer Perspektive’ veranstaltete.`,
+      "aboutP2": `Mit diesem Symposium war der Grundstein für eine internationale Germanistenkonferenz in und für Asien gelegt, die gemäß späteren Vereinbarungen prinzipiell alle drei Jahre wechselweise in einem der drei Länder stattfinden sollte. In diesem Rahmen wurde die Regionaltagung des Internationalen Deutschlehrer und –lehrerinnen Verbandes (IDV) 1994 in Beijing als die erste bzw. faktisch zweite Asiatische Germanistentagung durchgeführt, gefolgt von weiteren Konferenzen:`,
+      "aboutConferenceList": [
+        "1997 (Seoul): Germanistik im multimedialen Zeitalter",
+        "1999 (Fukuoka): Schwellenüberschreitungen",
+        "2002 (Beijing): Neues Jahrhundert, neue Herausforderungen",
+        "2006 (Seoul): Kulturwissenschaftliche Germanistik in Asien",
+        "2008 (Kanazawa): Transkulturalität: Identitäten in neuem Licht",
+        "2012 (Beijing): Interlingualität, Interkulturalität, Interdisziplinarität: Grenzerweiterungen der Germanistik",
+        "2016 (Seoul): Germanistik in Zeiten des großen Wandels – Tradition, Identität, Orientierung",
+        "2019 (Sapporo): Einheit in der Vielfalt? Germanistik zwischen Divergenz und Konvergenz",
+        "2024 (Qingdao): Technik · Gesellschaft · Kultur – Herausforderungen und Chancen für die Germanistik heute"
+      ],
+      "aboutP3": `Wenn es 1991 in Berlin eine asiatische Perspektive herauszustellen galt, so war damit die zentrale Problematik der Auslandsgermanistik in Asien angedeutet, die sich ihrer Identität wie ihrer Betätigungsfelder bewusst werden und für sie kämpfen musste. Wie aus den oben genannten Tagungsthemen ersichtlich wird, ging es auf den weiteren Tagungen stets um Themen, die die jüngsten internationalen Entwicklungen der Germanistik mitbestimmten und zugleich unserem Bedürfnis nach einer Neuorientierung in Lehre und Forschung Rechnung trugen.`,
+      "aboutP4": `Es gehört auch zu den Gepflogenheiten der Asiatischen Germanistentagung, neben den Mitgliedern der chinesischen, koreanischen und japanischen Fachverbände, Wissenschaftler und Wissenschaftlerinnen weltweit, vor allem aus anderen asiatischen Ländern wie auch aus Deutschland, Österreich und der Schweiz, einzuladen.`,
       "presidentMessageTitle": "Grußwort",
       "presidentName": "Prof. Dr. Mustermann, Präsident der KGG",
       "presidentMessage": "Liebe Kolleginnen und Kollegen, im Namen des gesamten Organisationsteams heiße ich Sie herzlich zur Asiatischen Germanistentagung 2026 in Incheon willkommen. Wir freuen uns auf einen anregenden Austausch.",
@@ -179,8 +192,21 @@ export const content = {
       "themeBtnReadMore": "Read More", // 더 알아보기
       "themeBtnShowLess": "Show Less", // 간략히 보기
       "aboutTitle": "About the AGT",
-      "aboutDesc1": "The Asian German-studies Conference (AGT) is a central forum for German scholars from all over Asia and beyond. Since its foundation in [Founding Year], it has served for academic exchange, networking, and the promotion of young researchers in the field of German language, literature, and culture.",
-      "aboutDesc2": "The conference takes place every [Number] years and has been hosted in cities such as [Beijing, Tokyo, Seoul]. It provides a platform to present the latest research findings and to initiate joint projects.",
+      "aboutP1": `The Asian German Studies Conference (Asiatische Germanistentagung - AGT), although not yet known by this name at the time, was founded in August 1991 when the Japanese Society for German Studies organized a symposium in Berlin for the three East Asian countries of Japan, China, and Korea on the theme 'German Literature and Language from an East Asian Perspective.'`,
+      "aboutP2": `This symposium laid the foundation for an international conference of German studies scholars in and for Asia, which, according to later agreements, was to take place principally every three years, alternating between one of the three countries. Within this framework, the regional conference of the International Association of German Teachers (IDV) in Beijing in 1994 was held as the first, or de facto second, Asian German Studies Conference, followed by further conferences:`,
+      "aboutConferenceList": [
+          "1997 (Seoul): German Studies in the Multimedia Age",
+          "1999 (Fukuoka): Crossing Thresholds",
+          "2002 (Beijing): New Century, New Challenges",
+          "2006 (Seoul): Cultural Studies-Oriented German Studies in Asia",
+          "2008 (Kanazawa): Transculturality: Identities in a New Light",
+          "2012 (Beijing): Interlinguality, Interculturality, Interdisciplinarity: Expanding the Borders of German Studies",
+          "2016 (Seoul): German Studies in Times of Great Change – Tradition, Identity, Orientation",
+          "2019 (Sapporo): Unity in Diversity? German Studies Between Divergence and Convergence",
+          "2024 (Qingdao): Technology · Society · Culture – Challenges and Opportunities for German Studies Today"
+      ],
+      "aboutP3": `When the task in Berlin in 1991 was to highlight an Asian perspective, it hinted at the central problem of German studies abroad in Asia, which had to become aware of its identity and its fields of activity and fight for them. As is evident from the conference themes listed above, the subsequent conferences always dealt with topics that co-determined the most recent international developments in German studies, while at the same time taking into account our need for a reorientation in teaching and research.`,
+      "aboutP4": `It is also a tradition of the Asian German Studies Conference to invite scholars from all over the world, especially from other Asian countries as well as from Germany, Austria, and Switzerland, in addition to the members of the Chinese, Korean, and Japanese professional associations.`,
       "presidentDesc1": "Dear colleagues, dear Germanists,",
       "presidentDesc2": "A warm welcome to the 17th Asian German-studies Conference 2027 in Seoul! It is a special honor for me, as President of the Korean Society for German Studies (KGG), to welcome you to this significant event. Under the theme 'German Studies in Asia: Traditions, Upheavals, Perspectives,' an inspiring exchange about the future of our field awaits us.",
       "presidentDesc3": "I look forward to inspiring discussions and unforgettable moments with you.",
