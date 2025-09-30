@@ -155,6 +155,16 @@ export const content = {
           "name": "Assist. Prof. Dr. Phil. CHO, Hyowon",
           "role": "Homepage und Presse",
           "institution": "Yonsei University, Seoul"
+        },
+        {
+          "name": "TBD",
+          "role": "TBD",
+          "institution": "Seoul National University, Seoul"
+        },
+        {
+          "name": "TBD",
+          "role": "TBD",
+          "institution": "TBD"
         }
       ],
       "contactTitle": "Kontakt",
@@ -272,6 +282,16 @@ export const content = {
           "name": "Assist. Prof. Dr. Phil. CHO, Hyowon",
           "role": "Homepage and Press",
           "institution": "Yonsei University, Seoul"
+        },
+        {
+          "name": "TBD",
+          "role": "TBD",
+          "institution": "Seoul National University, Seoul"
+        },
+        {
+          "name": "TBD",
+          "role": "TBD",
+          "institution": "TBD"
         }
       ],
       "contactTitle": "Contact",
