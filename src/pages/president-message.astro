@@ -5,29 +5,55 @@ import Footer from '../components/Footer.astro';
 import { content } from '../i18n/content';
 ---
 
-<Layout title="Grußwort - AGT 2026 Incheon">
+<!-- <Layout title="Grußwort - AGT 2026 Incheon">
     <Header />
     <main class="relative z-30 py-20 md:py-24 bg-gray-800">
         <section id="president-message" class="container mx-auto px-6">
             <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 md:mb-16" data-lang-key="presidentTitle">Grußwort</h2>
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-3/4 md:pr-12 text-slate-300 text-lg leading-relaxed space-y-6">
-                    <p data-lang-key="presidentDesc1">Liebe Kolleginnen und Kollegen, liebe Germanistinnen und Germanisten,</p>
-                    <p data-lang-key="presidentDesc2">herzlich willkommen zur 17. Asiatischen Germanistentagung 2026 in Seoul! Es ist mir eine besondere Ehre, Sie als Präsident der Koreanischen Gesellschaft für Germanistik (KGG) zu diesem bedeutenden Ereignis begrüßen zu dürfen. Unter dem Motto „Germanistik in Asien: Traditionen, Umbrüche, Perspektiven“ erwartet uns ein anregender Austausch über die Zukunft unseres Fachs.</p>
-                    <p data-lang-key="presidentDesc3">Ich freue mich auf inspirierende Diskussionen und unvergessliche Momente mit Ihnen.</p>
-                    <p class="font-bold" data-lang-key="presidentName">[Präsidentenname]</p>
-                    <p data-lang-key="presidentTitleOrg">[Präsident der Koreanischen Gesellschaft für Germanistik]</p>
+                    <p data-lang-key="presidentDesc1"></p>
+                    <p data-lang-key="presidentDesc2"></p>
+                    <p data-lang-key="presidentDesc3"></p>
+                    <p class="font-bold" data-lang-key="presidentName"></p>
+                    <p data-lang-key="presidentTitleOrg"></p>
                 </div>
-                <div class="md:w-1/4 mt-8 md:mt-0">
+                <!-- <div class="md:w-1/4 mt-8 md:mt-0">
                     <img src="/germanistik-konferenz-2026/photos/president-photo.png" alt="Foto des Präsidenten" class="rounded-full shadow-lg mx-auto">
+                </div> -->
+            <!-- </div>
+        </section>
+    </main>
+    <Footer />
+</Layout> --> 
+
+<Layout title="Grußwort - AGT 2027 Incheon">
+    <Header />
+    <main class="relative z-30 py-20 md:py-24 bg-gray-800">
+        <section id="president-message" class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 md:mb-16" data-lang-key="presidentMessageTitle"></h2>
+            
+            <!-- ▼▼▼ 수정된 부분 ▼▼▼ -->
+            <div class="max-w-4xl mx-auto bg-slate-800/50 p-8 md:p-10 rounded-lg shadow-xl">
+                <div class="text-slate-300 text-lg leading-relaxed space-y-6">
+                    <p data-lang-key="presidentDesc1"></p>
+                    <p data-lang-key="presidentDesc2"></p>
+                    <p data-lang-key="presidentDesc3"></p>
+                    
+                    <!-- 서명 부분을 시각적으로 구분 -->
+                    <div class="border-t border-slate-700 pt-6 mt-8">
+                        <p class="font-bold text-white" data-lang-key="presidentName"></p>
+                        <p class="text-base text-slate-400" data-lang-key="presidentTitleOrg"></p>
+                    </div>
                 </div>
             </div>
+            
         </section>
     </main>
     <Footer />
 </Layout>
 
-<script is:inline define:vars={{ content }}>
+<!-- <script is:inline define:vars={{ content }}>
     document.addEventListener('DOMContentLoaded', () => {
         const langButtons = {
             de: [document.getElementById('lang-de-desktop'), document.getElementById('lang-de-mobile')],
@@ -79,4 +105,4 @@ import { content } from '../i18n/content';
             });
         }
     });
-</script>
+</script> -->
