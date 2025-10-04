@@ -151,17 +151,17 @@ export const content = {
           "institution": "Incheon National University, Incheon"
         },
         {
-          "name": "Dozentin Dr. Phil. CHOI, Garam",
+          "name": "Dozentin Dr. phil. CHOI, Garam",
           "role": "Schatzmeister",
           "institution": "Seoul National University, Seoul"
         },
         {
-          "name": "Assoz. Prof. Dr. Phil. KIM, Yeon Soo",
+          "name": "Assoz. Prof. Dr. phil. KIM, Yeon Soo",
           "role": "Programm und Sektionen (Literatur)",
           "institution": "Kangwon National University, Chuncheon"
         },
         {
-          "name": "Assoz. Prof. Dr. Phil. KIM, Kyong",
+          "name": "Assoz. Prof. Dr. phil. KIM, Kyong",
           "role": "Programm und Sektionen (Sprache)",
           "institution": "Pusan National University, Pusan"
         },
@@ -279,22 +279,22 @@ export const content = {
           "institution": "Incheon National University, Incheon"
         },
         {
-          "name": "Dozentin Dr. Phil. CHOI, Garam",
+          "name": "Dozentin Dr. phil. CHOI, Garam",
           "role": "Treasurer",
           "institution": "Seoul National University, Seoul"
         },
         {
-          "name": "Assoz. Prof. Dr. Phil. KIM, Yeon Soo",
+          "name": "Assoz. Prof. Dr. phil. KIM, Yeon Soo",
           "role": "Program and Sections (Literature)",
           "institution": "Kangwon National University, Chuncheon"
         },
         {
-          "name": "Assoz. Prof. Dr. Phil. KIM, Kyong",
+          "name": "Assoz. Prof. Dr. phil. KIM, Kyong",
           "role": "Program and Sections (Language)",
           "institution": "Pusan National University, Pusan"
         },
         {
-          "name": "Assist. Prof. Dr. Phil. CHO, Hyowon",
+          "name": "Assist. Prof. Dr. phil. CHO, Hyowon",
           "role": "Homepage and Press",
           "institution": "Yonsei University, Seoul"
         },
