@@ -2,7 +2,7 @@ export const content = {
     de: { // 독일어 (de)
       "headerTitle": "AGT  2027",
       "navAbout": "Über die AGT",
-      "navPresidentMessage": "Grußwort",
+      "navPresidentMessage": "Grußworte",
       "navTheme": "Generalthema",
       "navInfo": "Informationen",
       "navContact": "Kontakt",
@@ -92,12 +92,26 @@ export const content = {
       "aboutP3": `Wenn es 1991 in Berlin eine asiatische Perspektive herauszustellen galt, so war damit die zentrale Problematik der Auslandsgermanistik in Asien angedeutet, die sich ihrer Identität wie ihrer Betätigungsfelder bewusst werden und für sie kämpfen musste. Wie aus den oben genannten Tagungsthemen ersichtlich wird, ging es auf den weiteren Tagungen stets um Themen, die die jüngsten internationalen Entwicklungen der Germanistik mitbestimmten und zugleich unserem Bedürfnis nach einer Neuorientierung in Lehre und Forschung Rechnung trugen.`,
       "aboutP4": `Es gehört auch zu den Gepflogenheiten der Asiatischen Germanistentagung, neben den Mitgliedern der chinesischen, koreanischen und japanischen Fachverbände, Wissenschaftler und Wissenschaftlerinnen weltweit, vor allem aus anderen asiatischen Ländern wie auch aus Deutschland, Österreich und der Schweiz, einzuladen.`,
       "presidentMessageTitle": "Grußwort",
-      "presidentName": "Prof. Dr. Mustermann, Präsident der KGG",
-      "presidentMessage": "Liebe Kolleginnen und Kollegen, im Namen des gesamten Organisationsteams heiße ich Sie herzlich zur Asiatischen Germanistentagung 2026 in Incheon willkommen. Wir freuen uns auf einen anregenden Austausch.",
-      "presidentDesc1": "Liebe Kolleginnen und Kollegen, liebe Germanistinnen und Germanisten,",
-      "presidentDesc2": "herzlich willkommen zur 17. Asiatischen Germanistentagung 2027 in Seoul! Es ist mir eine besondere Ehre, Sie als Präsident der Koreanischen Gesellschaft für Germanistik (KGG) zu diesem bedeutenden Ereignis begrüßen zu dürfen. Unter dem Motto „Germanistik in Asien: Traditionen, Umbrüche, Perspektiven“ erwartet uns ein anregender Austausch über die Zukunft unseres Fachs.",
-      "presidentDesc3": "Ich freue mich auf inspirierende Diskussionen und unvergessliche Momente mit Ihnen.",
-      "presidentTitleOrg": "KGG-Präsident (2025-2027)",
+      "presidentName": "Prof. Dr. KANG Chang-Uh",
+      "presidentDesc1": `Sehr geehrte Kolleginnen und Kollegen,`,
+      "presidentDesc2": `es ist für mich eine große Freude, Sie im Namen der Koreanischen Gesellschaft für Germanistik (= KGG) über
+      die nächste Asiatische Germanisten-Tagung (= AGT) informieren zu dürfen. Sie findet vom 23. bis zum 26.
+      August 2027 an der Incheon National University in Incheon, Südkorea, statt, und zwar unter dem Generalthema
+      „Nutzen und Nachteil der Germanistik in Asien für die Gegenwart“.`,
+      "presidentDesc3": `In den letzten Jahrzehnten war die
+      Germanistik in Asien mit verschiedenen Herausforderungen konfrontiert, und wir, die asiatischen Germanisten,
+      haben uns erfolgreich bemüht, gemeinsam einen Weg bzw. Ausweg zu erarbeiten, wozu m. E. die Asiatischen
+      Germanisten-Tagungen seit den 1990er Jahren viel beigetragen haben. Im Anschluss an die Erfolge in Sapporo
+      2019 und in Qingdao 2024 wollen wir diese lange Tradition diesmal im Jahr 2027 in Korea fortführen.`,
+      "presidentDesc4": `Ich hoffe
+      sehr, dass möglichst viele Germanistinnen und Germanisten nicht nur aus China, Japan und Südkorea, sondern
+      auch aus aller Welt in Incheon zusammenkommen, um Informationen und Meinungen auszutauschen und
+      gemeinsam neue Wege für die Germanistik in Asien im gerade begonnenen Zeitalter der Künstlichen Intelligenz
+      zu erkunden. Das Organisationskomitee der AGT 2027 unter der Leitung von Frau Professor SHIN Jiyoung
+      wird zusammen mit der KGG sein Bestes geben, um die Tagung bereichernd zu gestalten und den Aufenthalt in
+      Incheon angenehm zu machen. Ich freue mich schon auf die AGT 2027 in Incheon.`,
+      "presidentTitleName": "Präsident",
+      "presidentTitleOrg": "der Koreanischen Gesellschaft für Germanistik",
       "registerTitle": "Anmeldung",
       "registerType1Title": "1. Sektionsleitung",
       "registerType1Deadline": "Bewerbungsfrist: 28. Feb. 2027",
@@ -176,7 +190,7 @@ export const content = {
       "headerTitle": "AGT  2027",
       "navAbout": "About AGT",
       "navTheme": "Main Theme",
-      "navPresidentMessage": "President's Message",
+      "navPresidentMessage": "Greetings",
       "navInfo": "Information",
       "navContact": "Contact",
       "heroTitle": "Asian German-studies Conference 2027",
@@ -218,13 +232,14 @@ export const content = {
       ],
       "aboutP3": `When the task in Berlin in 1991 was to highlight an Asian perspective, it hinted at the central problem of German studies abroad in Asia, which had to become aware of its identity and its fields of activity and fight for them. As is evident from the conference themes listed above, the subsequent conferences always dealt with topics that co-determined the most recent international developments in German studies, while at the same time taking into account our need for a reorientation in teaching and research.`,
       "aboutP4": `It is also a tradition of the Asian German Studies Conference to invite scholars from all over the world, especially from other Asian countries as well as from Germany, Austria, and Switzerland, in addition to the members of the Chinese, Korean, and Japanese professional associations.`,
-      "presidentMessageTitle": "Welcome Message",
-      "presidentName": "Prof. Dr. KANG, Chang-Uh, President of the KGG",
-      "presidentMessage": "Dear colleagues, on behalf of the entire organizing committee, I warmly welcome you to the Asian German Studies Conference 2026 in Incheon. We look forward to a stimulating exchange.",
-      "presidentDesc1": "Dear colleagues, dear Germanists,",
-      "presidentDesc2": "A warm welcome to the 17th Asian German Studies Conference 2027 in Seoul! It is a special honor for me, as President of the Korean Society for German Studies (KGG), to welcome you to this significant event. Under the theme 'German Studies in Asia: Traditions, Upheavals, Perspectives,' an inspiring exchange about the future of our field awaits us.",
-      "presidentDesc3": "I look forward to inspiring discussions and unforgettable moments with you.",
-      "presidentTitleOrg": "KGG President (2025-2027)",
+      "presidentMessageTitle": "President's Message",
+      "presidentName": "Prof. Dr. KANG Chang-Uh",
+      "presidentDesc1": `Dear Colleagues,`,
+      "presidentDesc2": `It is a great pleasure for me to inform you about the next Asian German Studies Conference (AGT) on behalf of the Korean Society of German Language and Literature (KGG). The conference will take place from August 23 to 26, 2027, at Incheon National University in Incheon, South Korea, under the general theme of "Benefit and Disadvantage of German Studies in Asia for the Present."`,
+      "presidentDesc3": `In recent decades, German Studies in Asia has been confronted with various challenges, and we, Asian Germanists, have successfully endeavored to jointly work out a way or a solution. In my opinion, the Asian German Studies Conferences have contributed greatly to this since the 1990s. Following the successes in Sapporo 2019 and Qingdao 2024, we aim to continue this long tradition this time in Korea in 2027.`,
+      "presidentDesc4": `I sincerely hope that as many Germanists as possible, not only from China, Japan, and South Korea but also from all over the world, will gather in Incheon to exchange information and opinions and jointly explore new paths for German Studies in Asia in the just-begun age of Artificial Intelligence. The AGT 2027 Organizing Committee, led by Professor SHIN Jiyoung, will do its best together with the KGG to make the conference enriching and your stay in Incheon pleasant. I am already looking forward to the AGT 2027 in Incheon.`,
+      "presidentTitleName": "President",
+      "presidentTitleOrg": "of the Korean Society of German Language and Literature",
       "registerTitle": "Registration",
       "registerType1Title": "1. Section Leaders",
       "registerType1Deadline": "Application Deadline: Feb 28, 2027",
