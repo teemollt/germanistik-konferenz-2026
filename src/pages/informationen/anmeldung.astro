@@ -5,60 +5,88 @@ import Footer from '../../components/Footer.astro';
 import { content } from '../../i18n/content';
 ---
 
-<Layout title="Anmeldung - AGT 2026 Incheon">
+<Layout title="Anmeldung - AGT 2027 Incheon">
     <Header />
-    <main class="relative z-30 py-20 md:py-24 bg-[#14223f]">
+    <main class="relative z-30 py-20 md:py-24 bg-[#14223f] text-slate-300">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 md:mb-16" data-lang-key="registerTitle">Anmeldung</h2>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 md:mb-16 text-white" data-lang-key="registerTitle">Anmeldung</h2>
+
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 
-                <!-- Card 1 -->
-                <div class="bg-slate-800 p-8 rounded-lg text-center flex flex-col">
+                <!-- Card 1: Sektionsleitung -->
+                <div class="bg-slate-800 p-8 rounded-lg text-center flex flex-col border-2 border-amber-400/50">
                     <div class="flex-grow">
                         <h3 class="text-2xl font-bold text-white" data-lang-key="registerType1Title">1. Sektionsleitung</h3>
-                        <p class="text-slate-400 mt-2" data-lang-key="registerType1Deadline">Bewerbungsfrist: Feb. 2026</p>
+                        <p class="text-slate-400 mt-2" data-lang-key="registerType1Deadline">Bewerbungsfrist: Ende März 2026</p>
                         <p class="mt-4" data-lang-key="registerType1Desc">Leiten Sie eine Sektion und gestalten Sie das wissenschaftliche Programm aktiv mit.</p>
+                        <p class="text-xs text-amber-300 mt-4 p-2 bg-black/40 rounded" data-lang-key="sectionRequirements">
+                            Für die Bewerbung als Sektionsleitung ist eine Beschreibung des Sektionsthemas im Umfang von einer A4-Seite (inkl. Bibliographie) zwingend erforderlich.
+                        </p>
                     </div>
-                    <a href="https://forms.gle/ymUHq9ZPD3z3a7jJ7" class="mt-6 inline-block btn-gold font-semibold px-6 py-2 rounded-md transition" data-lang-key="registerType1Btn">Formular (Sektion)</a>
+                    <a href="https://forms.gle/ymUHq9ZPD3z3a7jJ7" target="_blank" class="mt-6 inline-block btn-gold font-semibold px-6 py-2 rounded-md transition" data-lang-key="registerType1Btn">Formular (Sektion)</a>
                 </div>
 
-                <!-- Card 2 -->
+                <!-- Card 2: Vortragende -->
                 <div class="bg-slate-800 p-8 rounded-lg text-center flex flex-col">
                     <div class="flex-grow">
                         <h3 class="text-2xl font-bold text-white" data-lang-key="registerType2Title">2. Vortragende</h3>
-                        <p class="text-slate-400 mt-2" data-lang-key="registerType2Deadline">Bewerbungsfrist: Dez. 2026</p>
+                        <p class="text-slate-400 mt-2" data-lang-key="registerType2Deadline">Bewerbungsfrist: Mai - Dez. 2026</p>
                         <p class="mt-4" data-lang-key="registerType2Desc">Präsentieren Sie Ihre Forschungsergebnisse einem internationalen Publikum.</p>
                     </div>
-                    <a href="https://forms.gle/ymUHq9ZPD3z3a7jJ7" class="mt-6 inline-block btn-gold font-semibold px-6 py-2 rounded-md transition" data-lang-key="registerType2Btn">Formular (Vortrag)</a>
+                    <a href="https://forms.gle/ymUHq9ZPD3z3a7jJ7" target="_blank" class="mt-6 inline-block btn-gold font-semibold px-6 py-2 rounded-md transition" data-lang-key="registerType2Btn">Formular (Vortrag)</a>
                 </div>
 
-                <!-- Card 3 -->
+                <!-- Card 3: Teilnehmende -->
                 <div class="bg-slate-800 p-8 rounded-lg text-center flex flex-col">
                     <div class="flex-grow">
                         <h3 class="text-2xl font-bold text-white" data-lang-key="registerType3Title">3. Teilnehmende</h3>
-                        <p class="text-slate-400 mt-2" data-lang-key="registerType3Deadline">Anmeldung: ab sofort</p>
+                        <p class="text-slate-400 mt-2" data-lang-key="registerType3Deadline">Anmeldung: ab Mai 2026</p>
                         <p class="mt-4" data-lang-key="registerType3Desc">Nehmen Sie an den Diskussionen teil und vernetzen Sie sich mit Kollegen.</p>
                     </div>
-                    <a href="https://forms.gle/ymUHq9ZPD3z3a7jJ7" class="mt-6 inline-block btn-gold font-semibold px-6 py-2 rounded-md transition" data-lang-key="registerType3Btn">Formular (Teilnahme)</a>
+                    <a href="https://forms.gle/ymUHq9ZPD3z3a7jJ7" target="_blank" class="mt-6 inline-block btn-gold font-semibold px-6 py-2 rounded-md transition" data-lang-key="registerType3Btn">Formular (Teilnahme)</a>
+                </div>
+            </div>
+
+            <!-- Common Notices & Fee Info Section -->
+            <div class="max-w-6xl mx-auto mt-12 p-8 bg-slate-900 rounded-lg border border-amber-400/20">
+                <div class="text-center">
+                    <p class="text-slate-200" data-lang-key="registrationCommonNotice">
+                        Alle Anmeldeformulare (Sektion, Vortrag, Teilnahme) enthalten auch die Anmeldung für das Rahmenprogramm.
+                    </p>
+                    <p class="text-amber-300 mt-2" data-lang-key="registerNote">
+                        * Sektionsleiter und Vortragende müssen sich ebenfalls als Teilnehmende registrieren.
+                    </p>
                 </div>
 
+                <div class="border-t border-slate-700 pt-6 mt-6">
+                    <h3 class="text-2xl font-bold text-white text-center mb-4" data-lang-key="feeDetailsTitle">Teilnahmegebühren</h3>
+                    <ul class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 text-lg text-center mb-6">
+                        <li class="flex items-center gap-2" data-lang-key="feeFullTime"><span class="w-3 h-3 inline-block bg-amber-400 rounded-full"></span>Vollzeit/Teilzeit: 150.000 KRW</li>
+                        <li class="flex items-center gap-2" data-lang-key="feeStudent"><span class="w-3 h-3 inline-block bg-amber-400 rounded-full"></span>Studierende: 50.000 KRW</li>
+                        <li class="flex items-center gap-2" data-lang-key="feeSocialProgram"><span class="w-3 h-3 inline-block bg-amber-400 rounded-full"></span>Rahmenprogramm: 50.000 KRW</li>
+                    </ul>
+                    <div class="text-center border-t border-slate-800 pt-4 mt-4">
+                         <p class="font-semibold text-amber-300" data-lang-key="paymentCompletionNotice">
+                            Die Anmeldung ist erst nach Eingang der Teilnahmegebühr (ggf. inkl. der Gebühr für das Rahmenprogramm) abgeschlossen.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <p class="text-center mt-8 text-slate-400" data-lang-key="registerNote">
-                * Sektionsleiter und Vortragende müssen sich ebenfalls als Teilnehmende registrieren.
-            </p>
+
         </div>
     </main>
     <Footer />
 </Layout>
-<script is:inline define:vars={{ content }}>
+
+<!-- <script is:inline define:vars={{ content }}>
     document.addEventListener('DOMContentLoaded', () => {
         const langButtons = {
             de: [document.getElementById('lang-de-desktop'), document.getElementById('lang-de-mobile')],
-            en: [document.getElementById('lang-en-desktop'), document.getElementById('lang-en-mobile')],
-            ko: [document.getElementById('lang-ko-desktop'), document.getElementById('lang-ko-mobile')]
+            en: [document.getElementById('lang-en-desktop'), document.getElementById('lang-en-mobile')]
         };
 
         const updateLanguage = (lang) => {
+            localStorage.setItem('language', lang);
             document.documentElement.lang = lang;
             document.querySelectorAll('[data-lang-key]').forEach(el => {
                 const key = el.getAttribute('data-lang-key');
@@ -82,24 +110,24 @@ import { content } from '../../i18n/content';
         Object.keys(langButtons).forEach(lang => {
             if (langButtons[lang]) {
                 langButtons[lang].forEach(button => {
-                    if(button) button.addEventListener('click', () => updateLanguage(lang));
+                    if(button) button.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        updateLanguage(lang);
+                    });
                 });
             }
         });
 
-        // Set German as the default language on initial load
-        updateLanguage('de');
+        const savedLang = localStorage.getItem('language') || 'de';
+        updateLanguage(savedLang);
 
-         // ID를 이용해 모바일 메뉴 버튼과 메뉴 패널을 찾습니다.
-         const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
-        // 두 요소가 모두 존재할 경우에만 클릭 이벤트를 추가합니다.
         if (mobileMenuButton && mobileMenu) {
             mobileMenuButton.addEventListener('click', () => {
-                // 'hidden' 클래스를 껐다 켰다 하면서 메뉴를 보이거나 숨깁니다.
                 mobileMenu.classList.toggle('hidden');
             });
         }
     });
-</script>
+</script> -->
