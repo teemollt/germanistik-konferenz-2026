@@ -188,6 +188,7 @@ export const content = {
       "contactTitle": "Kontakt",
       "contactDesc": "Für alle Anfragen zur Konferenz wenden Sie sich bitte an die folgende E-Mail-Adresse.",
       "contactEmail": "agt2027.incheon@email.com",
+      "contactAssistant": " Gwon Minseo (Korea University), Assistentin für die Organisation",
       "footerCopyright": "© 2027 Asiatische Germanistentagung Organizing Committee. All Rights Reserved."
     },
     en: { // 영어 (en)
@@ -320,6 +321,7 @@ export const content = {
       "contactTitle": "Contact",
       "contactDesc": "For all inquiries regarding the conference, please contact us at the following email address.",
       "contactEmail": "agt2027.incheon@email.com",
+      "contactAssistant": " Gwon Minseo (Korea University), Contact Assistant",
       "footerCopyright": "© 2027 Asian German-studies Conference Organizing Committee. All Rights Reserved."
     }
 };
