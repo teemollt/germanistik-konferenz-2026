@@ -175,7 +175,7 @@ export const content = {
           "institution": "Pusan National University, Pusan"
         },
         {
-          "name": "Assist. Prof. Dr. Phil. CHO, Hyowon",
+          "name": "Assist. Prof. Dr. phil. CHO, Hyowon",
           "role": "Homepage und Presse",
           "institution": "Yonsei University, Seoul"
         },
