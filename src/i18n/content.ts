@@ -180,14 +180,9 @@ export const content = {
           "institution": "Yonsei University, Seoul"
         },
         {
-          "name": "TBD",
-          "role": "TBD",
+          "name": "Prof. Dr. phil. Christian Baier",
+          "role": "Begleitheft und Tagungsband",
           "institution": "Seoul National University, Seoul"
-        },
-        {
-          "name": "TBD",
-          "role": "TBD",
-          "institution": "TBD"
         }
       ],
       "contactTitle": "Kontakt",
@@ -317,14 +312,9 @@ export const content = {
           "institution": "Yonsei University, Seoul"
         },
         {
-          "name": "TBD",
-          "role": "TBD",
+          "name": "Prof. Dr. phil. Christian Baier",
+          "role": "Conference Guide and Proceedings",
           "institution": "Seoul National University, Seoul"
-        },
-        {
-          "name": "TBD",
-          "role": "TBD",
-          "institution": "TBD"
         }
       ],
       "contactTitle": "Contact",
