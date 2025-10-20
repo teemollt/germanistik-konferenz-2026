@@ -134,9 +134,18 @@ export const content = {
       "feeStudent": "Studierende: 50.000 KRW",
       "feeSocialProgram": "Rahmenprogramm: 50.000 KRW",
       "bankInfoTitle": "Bankverbindung",
-      "bankTransferTitle": "Überweisung / Bank Transfer",
-      "bankDetails": "Kookmin Bank (KB): 098001-00-005911",
       "bankAccountHolder": "(Koreanische Gesellschaft fuer Germanistik)",
+      "internationalBankInfo": [
+        "Bank: KOOKMIN BANK",
+        "Address: 26, Gukjegeumyung-ro 8-gil, Yeongdeungpo-gu, Seoul, Korea",
+        "Swift Code: CZNBKRSEXXX",
+        "Account Number: 098001-00-005911",
+        "Name: Koreanische Gesellschaft fuer Germanistik",
+        "Phone: 82-02-887-4274"
+      ],
+      "googleFormNoticeTitle": 'Wichtiger Hinweis: Online-Anmeldeformulare (Google Forms)',
+      "googleFormNoticeBody": 'Alle oben genannten **"Formular"-Buttons** leiten zu **Google Forms** weiter. Der Zugriff kann in Regionen, in denen Google-Dienste blockiert sind (z. B. China), eingeschränkt sein.',
+      "googleFormAlternative": 'Bei Problemen mit dem Zugriff bitten wir Sie um eine separate Anmeldung per E-Mail an:',
       "venueTitle": "Tagungsort & Programm",
       "venueUniTitle": "Incheon National University",
       "venueUniDesc": "Die Konferenz findet auf dem modernen Songdo-Campus der Incheon National University statt. Der Campus ist bekannt für seine hochmoderne Infrastruktur und seine inspirierende Umgebung, die Wissenschaft und Natur vereint.",
@@ -190,7 +199,7 @@ export const content = {
       "contactTitle": "Kontakt",
       "contactDesc": "Für alle Anfragen zur Konferenz wenden Sie sich bitte an die folgende E-Mail-Adresse.",
       "contactEmail": "agt2027.incheon@email.com",
-      "contactAssistant": " Gwon Minseo (Korea University), Assistentin für die Organisation",
+      "contactAssistant": " Gwon Minseo (Korea University), Hilfskraft für die Organisation",
       "footerCopyright": "© 2027 Asiatische Germanistentagung Organizing Committee. All Rights Reserved."
     },
     en: { // 영어 (en)
@@ -270,8 +279,19 @@ export const content = {
       "feeSocialProgram": "Social Program: 50,000 KRW",
       "bankInfoTitle": "Bank Information",
       "bankTransferTitle": "Bank Transfer Information",
-      "bankDetails": "Kookmin Bank (KB): 098001-00-005911",
       "bankAccountHolder": "(Koreanische Gesellschaft fuer Germanistik)",
+      "internationalBankInfo": [
+        "Bank: KOOKMIN BANK",
+        "Address: 26, Gukjegeumyung-ro 8-gil, Yeongdeungpo-gu, Seoul, Korea",
+        "Swift Code: CZNBKRSEXXX",
+        "Account Number: 098001-00-005911",
+        "Name: Koreanische Gesellschaft fuer Germanistik",
+        "Phone: 82-02-887-4274"
+      ],
+      "googleFormNoticeTitle": 'Important Notice: Online Registration Forms (Google Forms)',
+      "googleFormNoticeBody": 'All the **"Formular" buttons** listed above will take you to **Google Forms**. Access might be blocked in regions where Google services are restricted (e.g., China).',
+      "googleFormAlternative": 'If you have trouble accessing the form, please send a separate registration request via email to:',
+    // ---------------------------------------------------
       "venueTitle": "Venue & Program",
       "venueUniTitle": "Incheon National University",
       "venueUniDesc": "The conference will take place at the modern Songdo campus of Incheon National University. The campus is known for its state-of-the-art infrastructure and inspiring environment that combines science and nature.",
