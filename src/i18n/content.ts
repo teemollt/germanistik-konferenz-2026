@@ -132,7 +132,7 @@ export const content = {
       "feeDetailsTitle": "Teilnahmegebühren",
       "feeFullTime": "Vollzeit/Teilzeit: 150.000 KRW",
       "feeStudent": "Studierende: 50.000 KRW",
-      "feeSocialProgram": "Rahmenprogramm: 50.000 KRW",
+      // "feeSocialProgram": "Rahmenprogramm: 50.000 KRW",
       "bankInfoTitle": "Bankverbindung",
       "bankAccountHolder": "(Koreanische Gesellschaft fuer Germanistik)",
       "internationalBankInfo": [
@@ -199,7 +199,7 @@ export const content = {
       "contactTitle": "Kontakt",
       "contactDesc": "Für alle Anfragen zur Konferenz wenden Sie sich bitte an die folgende E-Mail-Adresse.",
       "contactEmail": "agt2027.incheon@email.com",
-      "contactAssistant": " Gwon Minseo (Korea University), Hilfskraft für die Organisation",
+      "contactAssistant": " B.A. GWON, Minseo (Korea University), Hilfskraft für die Organisation",
       "footerCopyright": "© 2027 Asiatische Germanistentagung Organizing Committee. All Rights Reserved."
     },
     en: { // 영어 (en)
@@ -276,7 +276,7 @@ export const content = {
       "feeDetailsTitle": "Conference Fees",
       "feeFullTime": "Full-time/Part-time: 150,000 KRW",
       "feeStudent": "Students: 50,000 KRW",
-      "feeSocialProgram": "Social Program: 50,000 KRW",
+      // "feeSocialProgram": "Social Program: 50,000 KRW",
       "bankInfoTitle": "Bank Information",
       "bankTransferTitle": "Bank Transfer Information",
       "bankAccountHolder": "(Koreanische Gesellschaft fuer Germanistik)",
@@ -345,7 +345,7 @@ export const content = {
       "contactTitle": "Contact",
       "contactDesc": "For all inquiries regarding the conference, please contact us at the following email address.",
       "contactEmail": "agt2027.incheon@email.com",
-      "contactAssistant": " Gwon Minseo (Korea University), Contact Assistant",
+      "contactAssistant": " B.A. GWON, Minseo (Korea University), Contact Assistant",
       "footerCopyright": "© 2027 Asian German-studies Conference Organizing Committee. All Rights Reserved."
     }
 };
