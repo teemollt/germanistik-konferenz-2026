@@ -134,13 +134,13 @@ export const content = {
       "feeStudent": "Studierende: 50.000 KRW",
       // "feeSocialProgram": "Rahmenprogramm: 50.000 KRW",
       "bankInfoTitle": "Bankverbindung",
-      "bankAccountHolder": "(Koreanische Gesellschaft fuer Germanistik)",
+      "bankAccountHolder": "(name: KGG)",
       "internationalBankInfo": [
         "Bank: KOOKMIN BANK",
         "Address: 26, Gukjegeumyung-ro 8-gil, Yeongdeungpo-gu, Seoul, Korea",
         "Swift Code: CZNBKRSEXXX",
         "Account Number: 098001-00-005911",
-        "Name: Koreanische Gesellschaft fuer Germanistik",
+        "Name: KGG",
         "Phone: 82-02-887-4274"
       ],
       "googleFormNoticeTitle": 'Wichtiger Hinweis: Online-Anmeldeformulare (Google Forms)',
@@ -279,13 +279,13 @@ export const content = {
       // "feeSocialProgram": "Social Program: 50,000 KRW",
       "bankInfoTitle": "Bank Information",
       "bankTransferTitle": "Bank Transfer Information",
-      "bankAccountHolder": "(Koreanische Gesellschaft fuer Germanistik)",
+      "bankAccountHolder": "(name: KGG)",
       "internationalBankInfo": [
         "Bank: KOOKMIN BANK",
         "Address: 26, Gukjegeumyung-ro 8-gil, Yeongdeungpo-gu, Seoul, Korea",
         "Swift Code: CZNBKRSEXXX",
         "Account Number: 098001-00-005911",
-        "Name: Koreanische Gesellschaft fuer Germanistik",
+        "Name: KGG",
         "Phone: 82-02-887-4274"
       ],
       "googleFormNoticeTitle": 'Important Notice: Online Registration Forms (Google Forms)',
