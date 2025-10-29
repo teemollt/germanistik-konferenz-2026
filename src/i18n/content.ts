@@ -116,7 +116,7 @@ export const content = {
       "registerType1Title": "1. Sektionsleitung",
       "registerType1Deadline": "Bewerbungsfrist: Ende März 2026",
       "registerType1Desc": "Leiten Sie eine Sektion und gestalten Sie das wissenschaftliche Programm aktiv mit.",
-      "sectionRequirements": "Für die Bewerbung als Sektionsleitung ist eine Beschreibung des Sektionsthemas im Umfang von einer A4-Seite (inkl. Bibliographie) zwingend erforderlich.",
+      "sectionRequirements": "Für die Bewerbung als Sektionsleitung ist eine Beschreibung des Sektionsthemas im Umfang von einer A4-Seite (inkl. Bibliographie) erforderlich.",
       "registerType1Btn": "Formular (Sektion)",
       "registerType2Title": "2. Vortragende",
       "registerType2Deadline": "Bewerbungsfrist: Mai - Dez. 2026",
