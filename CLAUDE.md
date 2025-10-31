@@ -58,6 +58,6 @@ Mobile menu toggle logic is centralized in [src/layouts/Layout.astro](src/layout
 ## Conference-Specific Notes
 
 - Registration forms link to Google Forms (may be blocked in some regions like China)
-- Alternative email registration: agt2027.incheon@email.com
+- Alternative email registration: agt2027.incheon@gmail.com
 - Conference date: August 23-26, 2027
 - Main branch for PRs: `main`

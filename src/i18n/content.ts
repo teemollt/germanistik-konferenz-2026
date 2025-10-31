@@ -15,7 +15,7 @@ export const content = {
       "infoCardRahmenprogramm": "Rahmenprogramm",
       "subInfoAnreise": "Anreise und Unterkunft",
       "subInfoLesungen": "Lesungen",
-      "subInfoFoerdergeber": "Fördergeber",
+      "subInfoFoerdergeber": "Förderer",
       "themeLabel": "Generalthema",
       "themeTitle": "Nutzen und Nachteil der Germanistik in Asien für die Gegenwart",
       "themeShortDesc": `In Asien – mit Sicherheit aber zumindest in Korea – ist, heutzutage Germanist zu sein,
@@ -35,7 +35,7 @@ export const content = {
         von der ‚Welteroberung‘ durch populärkulturelle ‚K-Contents’. Dementsprechend
         geraten (wenigstens hier in Korea) die Abteilungen für Deutsche Sprache und Literatur
         immer mehr ins Hintertreffen. Es werden die Studienplätze und Lehrstühle reduziert, um
-        die digitalen und technischen Studiengängen auszuweiten. Germanistik ist unter der
+        die digitalen und technischen Studiengänge auszuweiten. Germanistik ist unter der
         digitaltechnischen Vorherrschaft immer stärker ‚unzeitgemäß‘ geworden und befindet
         sich in der Krise.`,
         "themeFullDesc2":
@@ -141,7 +141,7 @@ export const content = {
         "Swift Code: CZNBKRSEXXX",
         "Account Number: 098001-00-005911",
         "Name: KGG",
-        "Phone: 82-02-887-4274"
+        "Phone: 028874274"
       ],
       "googleFormNoticeTitle": 'Wichtiger Hinweis: Online-Anmeldeformulare (Google Forms)',
       "googleFormNoticeBody": 'Alle oben genannten **"Formular"-Buttons** leiten zu **Google Forms** weiter. Der Zugriff kann in Regionen, in denen Google-Dienste blockiert sind (z. B. China), eingeschränkt sein.',
@@ -167,12 +167,12 @@ export const content = {
         },
         {
           "name": "Assoz. Prof. Dr. phil. MOK, Seong-Sook",
-          "role": "AGT-Organisation (Vor Ort)",
+          "role": "AGT-Organisation (vor Ort)",
           "institution": "Incheon National University, Incheon"
         },
         {
           "name": "Dozentin Dr. phil. CHOI, Garam",
-          "role": "Schatzmeister",
+          "role": "Schatzmeisterin",
           "institution": "Seoul National University, Seoul"
         },
         {
@@ -198,8 +198,8 @@ export const content = {
       ],
       "contactTitle": "Kontakt",
       "contactDesc": "Für alle Anfragen zur Konferenz wenden Sie sich bitte an die folgende E-Mail-Adresse.",
-      "contactEmail": "agt2027.incheon@email.com",
-      "contactAssistant": " B.A. GWON, Minseo (Korea University), Hilfskraft für die Organisation",
+      "contactEmail": "agt2027.incheon@gmail.com",
+      "contactAssistant": " GWON, MInseo B. A. (Korea University), Assistentin für die Organisation",
       "footerCopyright": "© 2027 Asiatische Germanistentagung Organizing Committee. All Rights Reserved."
     },
     en: { // 영어 (en)
@@ -286,7 +286,7 @@ export const content = {
         "Swift Code: CZNBKRSEXXX",
         "Account Number: 098001-00-005911",
         "Name: KGG",
-        "Phone: 82-02-887-4274"
+        "Phone: 028874274"
       ],
       "googleFormNoticeTitle": 'Important Notice: Online Registration Forms (Google Forms)',
       "googleFormNoticeBody": 'All the **"Formular" buttons** listed above will take you to **Google Forms**. Access might be blocked in regions where Google services are restricted (e.g., China).',
@@ -344,8 +344,8 @@ export const content = {
       ],
       "contactTitle": "Contact",
       "contactDesc": "For all inquiries regarding the conference, please contact us at the following email address.",
-      "contactEmail": "agt2027.incheon@email.com",
-      "contactAssistant": " B.A. GWON, Minseo (Korea University), Contact Assistant",
+      "contactEmail": "agt2027.incheon@gmail.com",
+      "contactAssistant": " GWON, MInseo B. A. (Korea University), Contact Assistant",
       "footerCopyright": "© 2027 Asian German-studies Conference Organizing Committee. All Rights Reserved."
     }
 };
