@@ -2,7 +2,7 @@ export const content = {
     de: { // 독일어 (de)
       "headerTitle": "AGT  2027",
       "navAbout": "Über die AGT",
-      "navPresidentMessage": "Grußworte",
+      "navPresidentMessage": "Grußwort",
       "navTheme": "Generalthema",
       "navInfo": "Informationen",
       "navContact": "Kontakt",
@@ -14,7 +14,7 @@ export const content = {
       "infoCardTagungsort": "Tagungsort",
       "infoCardRahmenprogramm": "Rahmenprogramm",
       "subInfoAnreise": "Anreise und Unterkunft",
-      "subInfoLesungen": "Lesungen",
+      "subInfoLesungen": "Autorenlesungen",
       "subInfoFoerdergeber": "Förderer",
       "themeLabel": "Generalthema",
       "themeTitle": "Nutzen und Nachteil der Germanistik in Asien für die Gegenwart",
