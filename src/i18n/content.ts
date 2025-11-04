@@ -157,7 +157,7 @@ export const content = {
       "teamMembers": [
         {
           "name": "Prof. Dr. phil. KANG, Chang-Uh",
-          "role": "KGG-Präsident (2025-2027)",
+          "role": "KGG-Präsident (2025-2026)",
           "institution": "Seoul National University, Seoul"
         },
         {
@@ -303,7 +303,7 @@ export const content = {
       "teamMembers": [
         {
           "name": "Prof. Dr. phil. KANG, Chang-Uh",
-          "role": "KGG President (2025-2027)",
+          "role": "KGG President (2025-2026)",
           "institution": "Seoul National University, Seoul"
         },
         {
