@@ -5,10 +5,10 @@ import { content } from '../i18n/content';
 
 export interface Props {
     title: string;
-    description?: string;
+    // description?: string;
 }
 
-const { title, description } = Astro.props;
+const { title } = Astro.props;
 const defaultDescription = "Asian German Studies Conference 2027 (Asiatische Germanistentagung) in Incheon, South Korea. International academic conference for German literature and language scholars, August 23-26, 2027.";
 ---
 <!DOCTYPE html>
@@ -19,7 +19,7 @@ const defaultDescription = "Asian German Studies Conference 2027 (Asiatische Ger
 
     <!-- SEO Meta Tags -->
     <title>{title}</title>
-    <meta name="description" content={description || defaultDescription}>
+    <meta name="description" content={defaultDescription}>
     <meta name="keywords" content="German Studies, Germanistik, Asian Conference, AGT 2027, Incheon, Academic Conference, German Literature, Deutsche Literatur, Sprachwissenschaft, Asian German Studies, 아시아 독문학, 学术会议">
     <meta name="author" content="Korean Society of German Language and Literature">
     <meta name="robots" content="index, follow">
@@ -29,7 +29,7 @@ const defaultDescription = "Asian German Studies Conference 2027 (Asiatische Ger
     <meta property="og:type" content="website">
     <meta property="og:url" content={Astro.url.href}>
     <meta property="og:title" content={title}>
-    <meta property="og:description" content={description || defaultDescription}>
+    <meta property="og:description" content={defaultDescription}>
     <meta property="og:image" content="https://agt2027.org/photos/registration_image.jpg">
     <meta property="og:locale" content="de_DE">
     <meta property="og:locale:alternate" content="en_US">
@@ -38,7 +38,7 @@ const defaultDescription = "Asian German Studies Conference 2027 (Asiatische Ger
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content={title}>
-    <meta name="twitter:description" content={description || defaultDescription}>
+    <meta name="twitter:description" content={defaultDescription}>
     <meta name="twitter:image" content="https://agt2027.org/photos/registration_image.jpg">
 
     <!-- Language Alternatives -->
