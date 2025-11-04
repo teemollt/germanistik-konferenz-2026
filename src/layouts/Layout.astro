@@ -5,23 +5,120 @@ import { content } from '../i18n/content';
 
 export interface Props {
     title: string;
+    description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
+const defaultDescription = "Asian German Studies Conference 2027 (Asiatische Germanistentagung) in Incheon, South Korea. International academic conference for German literature and language scholars, August 23-26, 2027.";
 ---
 <!DOCTYPE html>
 <html lang="de" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
     <title>{title}</title>
+    <meta name="description" content={description || defaultDescription}>
+    <meta name="keywords" content="German Studies, Germanistik, Asian Conference, AGT 2027, Incheon, Academic Conference, German Literature, Deutsche Literatur, Sprachwissenschaft, Asian German Studies, 아시아 독문학, 学术会议">
+    <meta name="author" content="Korean Society of German Language and Literature">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href={Astro.url.href}>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content={Astro.url.href}>
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description || defaultDescription}>
+    <meta property="og:image" content="https://agt2027.org/photos/registration_image.jpg">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:site_name" content="Asian German Studies Conference 2027">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content={title}>
+    <meta name="twitter:description" content={description || defaultDescription}>
+    <meta name="twitter:image" content="https://agt2027.org/photos/registration_image.jpg">
+
+    <!-- Language Alternatives -->
+    <link rel="alternate" hreflang="de" href="https://agt2027.org/">
+    <link rel="alternate" hreflang="en" href="https://agt2027.org/">
+    <link rel="alternate" hreflang="x-default" href="https://agt2027.org/">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
-    
+
     <!-- ▼▼▼ 1. AOS 라이브러리 파일을 여기서 불러옵니다 ▼▼▼ -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Schema.org Structured Data - Event -->
+    <script is:inline type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Asian German Studies Conference 2027",
+      "alternateName": "Asiatische Germanistentagung 2027",
+      "description": "International academic conference for German Studies scholars in Asia, focusing on the benefits and challenges of German Studies in the present day",
+      "startDate": "2027-08-23",
+      "endDate": "2027-08-26",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Incheon National University",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Incheon",
+          "addressRegion": "Incheon",
+          "addressCountry": "KR"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Korean Society of German Language and Literature",
+        "alternateName": "Koreanische Gesellschaft für Germanistik",
+        "url": "https://agt2027.org"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "150000",
+        "priceCurrency": "KRW",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2026-05-01",
+        "url": "https://agt2027.org"
+      },
+      "performer": {
+        "@type": "Organization",
+        "name": "Korean Society of German Language and Literature"
+      },
+      "inLanguage": ["de", "en"],
+      "keywords": "German Studies, Germanistik, Conference, Asia, Academic, Literature, Language, Deutsche Literatur, Sprachwissenschaft"
+    }
+    </script>
+
+    <!-- Schema.org Structured Data - Organization -->
+    <script is:inline type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Korean Society of German Language and Literature",
+      "alternateName": "Koreanische Gesellschaft für Germanistik",
+      "url": "https://agt2027.org",
+      "logo": "https://agt2027.org/photos/inulogo_v2.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "agt2027.incheon@gmail.com",
+        "contactType": "Conference Registration",
+        "availableLanguage": ["German", "English"]
+      },
+      "sameAs": [
+        "https://agt2027.org"
+      ]
+    }
+    </script>
 </head>
 <body class="overflow-x-hidden">
     <slot />
