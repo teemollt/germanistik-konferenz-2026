@@ -171,9 +171,9 @@ export const content = {
           "institution": "Incheon National University, Incheon"
         },
         {
-          "name": "Dozentin Dr. phil. CHOI, Garam",
+          "name": "Assist. Prof. Dr. phil. CHOI, Garam",
           "role": "Schatzmeisterin",
-          "institution": "Seoul National University, Seoul"
+          "institution": "Pusan National University, Pusan"
         },
         {
           "name": "Assoz. Prof. Dr. phil. KIM, Yeon Soo",
@@ -317,9 +317,9 @@ export const content = {
           "institution": "Incheon National University, Incheon"
         },
         {
-          "name": "Dozentin Dr. phil. CHOI, Garam",
+          "name": "Assist. Prof. Dr. phil. CHOI, Garam",
           "role": "Treasurer",
-          "institution": "Seoul National University, Seoul"
+          "institution": "Pusan National University, Pusan"
         },
         {
           "name": "Assoz. Prof. Dr. phil. KIM, Yeon Soo",
