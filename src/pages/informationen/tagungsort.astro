@@ -4,37 +4,39 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { content } from '../../i18n/content';
 
+const t = (key: string) => (content.de as unknown as Record<string, string>)[key] ?? key;
+
 // 버스 정보 데이터
 const busesViaINUStation = [
   {
     number: "8, 8A",
     type: "trunk",
-    finalStop: "Incheon National University College of Engineering ↔ Songnae Station Nambu",
-    intermediate: "Incheon City Hall, Incheon National University Station"
+    finalStopKey: "venueBus8Final",
+    intermediateKey: "venueBus8Intermediate"
   },
   {
     number: "58",
     type: "trunk", 
-    finalStop: "Juan Station Transfer Bus Stop ↔ Songdo 2nd Announcement",
-    intermediate: "Incheon National University Station, Juan Station, Incheon National University Main Gate"
+    finalStopKey: "venueBus58Final",
+    intermediateKey: "venueBus58Intermediate"
   },
   {
     number: "41",
     type: "circular",
-    finalStop: "Sinjeong Middle School",
-    intermediate: "BIT Zone Station, Incheon National University Station, IncheonUniv. Songdo Campus"
+    finalStopKey: "venueBus41Final",
+    intermediateKey: "venueBus41Intermediate"
   },
   {
     number: "46", 
     type: "circular",
-    finalStop: "College of Engineering, Incheon National University ↔ Dongnam Apartment(Mujigae Apartment)",
-    intermediate: "Central Park Station, Incheon National University Station, IncheonUniv. Songdo Campus"
+    finalStopKey: "venueBus46Final",
+    intermediateKey: "venueBus46Intermediate"
   },
   {
     number: "3002",
     type: "express",
-    finalStop: "College of Engineering, Incheon National University ↔ KTX Gwangmyeong Station Exit 6", 
-    intermediate: "Incheon National University Station, Incheon National University Main Gate, KTX Gwangmyeong Station Exit 6"
+    finalStopKey: "venueBus3002Final",
+    intermediateKey: "venueBus3002Intermediate"
   }
 ];
 
@@ -42,59 +44,53 @@ const busesViaCampus = [
   {
     number: "6, 6-1",
     type: "trunk",
-    finalStop: "Songdo Public Garage ↔ Namdong Sports Center",
-    intermediate: "College of Natural Sciences, Incheon National University, Seonhak Station"
+    finalStopKey: "venueBus6Final",
+    intermediateKey: "venueBus6Intermediate"
   },
   {
     number: "43",
     type: "circular", 
-    finalStop: "Songdo Sports Center(LNGBaseball Field) ↔ Songdo Public Garage",
-    intermediate: "Int'l Business District Station, Technopark Station, Incheon National University Main Gate"
+    finalStopKey: "venueBus43Final",
+    intermediateKey: "venueBus43Intermediate"
   },
   {
     number: "1301",
     type: "metro-express",
-    finalStop: "Yeongdeungpo Tax Office, Seonyoo High School ↔ Songdo Public Garage",
-    intermediate: "Sinjungdong Station Exit 5 / Jungheung Middle School, College of Natural Sciences, Incheon National University"
+    finalStopKey: "venueBus1301Final",
+    intermediateKey: "venueBus1301Intermediate"
   },
   {
     number: "M6405",
     type: "metro-rapid",
-    finalStop: "Gangnam Station, Seocho Hyundai Tower ↔ College of Engineering, Incheon National University",
-    intermediate: "Seoul Nat'l Univ. of Education station, College of Engineering, Incheon National University, Central Park Station"
+    finalStopKey: "venueBusM6405Final",
+    intermediateKey: "venueBusM6405Intermediate"
   }
 ];
 
 const outsideRoutes = [
   {
     titleKey: "venueFromIncheonAirport",
-    title: "From Incheon International Airport",
-    route: "Airport → Airport Railroad → Transfer at various stations → Incheon National University"
+    routeKey: "venueRouteIncheonAirport"
   },
   {
     titleKey: "venueFromGimpoAirport", 
-    title: "From Gimpo International Airport",
-    route: "Gimpo Airport → Subway Line 5/9 → Transfer → Incheon Line 1 → Incheon Nat'l Univ. Station"
+    routeKey: "venueRouteGimpoAirport"
   },
   {
     titleKey: "venueFromSeoulStation",
-    title: "From Seoul Station", 
-    route: "Seoul Station → Subway Line 1 → Bupyeong Station → Incheon Line 1 → Incheon Nat'l Univ. Station"
+    routeKey: "venueRouteSeoulStation"
   },
   {
     titleKey: "venueFromYongsanStation",
-    title: "From Yongsan Station",
-    route: "Yongsan → Subway Line 1 → Transfer at Bupyeong → Incheon Line 1 → Incheon Nat'l Univ. Station"
+    routeKey: "venueRouteYongsanStation"
   },
   {
     titleKey: "venueFromGwangmyeongStation", 
-    title: "From Gwangmyeong Station",
-    route: "KTX Gwangmyeong → Express Bus 3002 → Incheon National University"
+    routeKey: "venueRouteGwangmyeongStation"
   },
   {
     titleKey: "venueFromIncheonBusTerminal",
-    title: "From Incheon Bus Terminal", 
-    route: "Incheon Bus Terminal → Local Bus → Incheon Nat'l Univ. Station → Campus Shuttle"
+    routeKey: "venueRouteIncheonBusTerminal"
   }
 ];
 
@@ -111,21 +107,21 @@ function getBusColor(type) {
 }
 ---
 
-<Layout title="Directions - AGT 2027 Incheon">
+<Layout title={`${t('directionsTitle')} - AGT 2027 Incheon`}>
     <Header />
     <main class="relative z-30 py-20 md:py-24">
         <!-- 상단 소개 섹션 -->
         <section id="venue-intro" class="container mx-auto px-6 mb-16">
             <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
                 <div data-aos="fade-right">
-                    <h1 class="text-4xl md:text-5xl font-extrabold mb-8" data-lang-key="directionsTitle">Directions</h1>
+                    <h1 class="text-4xl md:text-5xl font-extrabold mb-8" data-lang-key="directionsTitle">{t('directionsTitle')}</h1>
                     <div class="space-y-6 text-lg">
                         <div>
-                            <h2 class="font-bold text-white text-2xl mb-4" data-lang-key="venueUniTitle">Incheon National University</h2>
-                            <p class="text-slate-300 mb-4" data-lang-key="venueUniDesc">Songdo Campus - A modern campus that unites science and nature.</p>
+                            <h2 class="font-bold text-white text-2xl mb-4" data-lang-key="venueUniTitle">{t('venueUniTitle')}</h2>
+                            <p class="text-slate-300 mb-4" data-lang-key="venueUniDesc">{t('venueUniDesc')}</p>
                             <div class="bg-slate-800/50 rounded-lg p-4 border border-slate-700">
-                                <h3 class="font-semibold text-amber-400 mb-2">Campus Address</h3>
-                                <p class="text-slate-300">119 Academy-ro, Yeonsu-gu, Incheon, South Korea</p>
+                                <h3 class="font-semibold text-[#d2b06a] mb-2" data-lang-key="venueCampusAddressTitle">{t('venueCampusAddressTitle')}</h3>
+                                <p class="text-slate-300" data-lang-key="venueCampusAddress">{t('venueCampusAddress')}</p>
                             </div>
                         </div>
                     </div>
@@ -139,25 +135,25 @@ function getBusColor(type) {
         <!-- 메인 길안내 섹션 -->
         <section id="directions-content" class="container mx-auto px-6">
             <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-lang-key="directionsSubtitle">How to Get to Songdo Campus</h2>
-                <p class="text-lg text-slate-300">Choose your starting point and find the best route to the university</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-lang-key="directionsSubtitle">{t('directionsSubtitle')}</h2>
+                <p class="text-lg text-slate-300" data-lang-key="directionsIntro">{t('directionsIntro')}</p>
             </div>
 
             <!-- 탭 네비게이션 -->
-            <div class="flex justify-center border-b border-slate-700 mb-12" data-aos="fade-up">
-                <button data-tab="from-outside" class="tab-btn active px-6 py-3 text-lg font-semibold border-b-2" data-lang-key="venueTab1">From Outside the City</button>
-                <button data-tab="from-downtown" class="tab-btn px-6 py-3 text-lg font-semibold border-b-2" data-lang-key="venueTab2">From Downtown</button>
+            <div class="flex justify-center border-b border-slate-700 mb-12" data-aos="fade-up" role="tablist" aria-label={t('venueDirectionsOptions')}>
+                <button type="button" role="tab" aria-selected="true" aria-controls="from-outside" data-tab="from-outside" class="tab-btn active px-6 py-3 text-lg font-semibold border-b-2" data-lang-key="venueTab1">{t('venueTab1')}</button>
+                <button type="button" role="tab" aria-selected="false" aria-controls="from-downtown" data-tab="from-downtown" class="tab-btn px-6 py-3 text-lg font-semibold border-b-2" data-lang-key="venueTab2">{t('venueTab2')}</button>
             </div>
 
             <!-- 시외 교통편 탭 -->
-            <div id="from-outside" class="tab-content">
+            <div id="from-outside" class="tab-content" role="tabpanel">
                 <div class="grid gap-6 mb-12" data-aos="fade-up">
-                    {outsideRoutes.map((route, index) => (
+                    {outsideRoutes.map((route) => (
                         <div class="route-card bg-slate-800/50 rounded-lg p-6 border border-slate-700">
-                            <h3 class="text-xl font-bold text-amber-400 mb-3">{route.title}</h3>
+                            <h3 class="text-xl font-bold text-[#d2b06a] mb-3" data-lang-key={route.titleKey}>{t(route.titleKey)}</h3>
                             <div class="flex items-center gap-4 text-slate-300">
                                 <span class="text-2xl">🚌</span>
-                                <p>{route.route}</p>
+                                <p data-lang-key={route.routeKey}>{t(route.routeKey)}</p>
                             </div>
                         </div>
                     ))}
@@ -165,39 +161,39 @@ function getBusColor(type) {
             </div>
 
             <!-- 시내 교통편 탭 -->
-            <div id="from-downtown" class="tab-content hidden">
+            <div id="from-downtown" class="tab-content hidden" role="tabpanel">
                 <div class="info-box bg-slate-800/30 rounded-lg p-6 border border-slate-700" data-aos="fade-up">
                     <h3 class="text-2xl font-bold text-white mb-6 border-b border-slate-600 pb-4">
-                        <span class="text-amber-400">📍</span> Incheon National University Station Guide
+                        <span class="text-[#d2b06a]">📍</span> <span data-lang-key="venueStationGuide">{t('venueStationGuide')}</span>
                     </h3>
                     <div class="grid md:grid-cols-3 gap-8 items-stretch">
                         <div class="md:col-span-2 flex flex-col gap-6">
                             <div class="bg-slate-700/50 rounded-lg p-6 flex-grow">
-                                <h4 class="font-bold text-amber-400 mb-4 flex items-center gap-2 text-xl">
-                                    <span>🚇</span> Subway Exit Guide
+                                <h4 class="font-bold text-[#d2b06a] mb-4 flex items-center gap-2 text-xl">
+                                    <span>🚇</span> <span data-lang-key="venueSubwayExitGuide">{t('venueSubwayExitGuide')}</span>
                                 </h4>
                                 <div>
-                                    <p class="text-slate-300 mb-4">Incheon Line 1, Incheon Nat'l Univ. Station</p>
+                                    <p class="text-slate-300 mb-4" data-lang-key="venueSubwayStation">{t('venueSubwayStation')}</p>
                                     <div class="flex gap-2">
-                                        <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold">Exit 1</span>
-                                        <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold">Exit 2</span>
+                                        <span class="bg-[#4f73a8] text-white px-3 py-1 rounded-full text-sm font-bold" data-lang-key="venueExit1">{t('venueExit1')}</span>
+                                        <span class="bg-[#4f73a8] text-white px-3 py-1 rounded-full text-sm font-bold" data-lang-key="venueExit2">{t('venueExit2')}</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="bg-slate-700/50 rounded-lg p-6 flex-grow">
-                                <h4 class="font-bold text-amber-400 mb-3 flex items-center gap-2">
-                                    <span>🚌</span> Bus Information
+                                <h4 class="font-bold text-[#d2b06a] mb-3 flex items-center gap-2">
+                                    <span>🚌</span> <span data-lang-key="venueBusInformation">{t('venueBusInformation')}</span>
                                 </h4>
                                 <div class="space-y-2 text-sm">
-                                    <p><span class="text-blue-400 font-semibold">School Shuttle Bus</span></p>
-                                    <p><span class="text-green-400 font-semibold">Trunk Buses:</span> 8, 8A, 58</p>
-                                    <p><span class="text-purple-400 font-semibold">Circular Buses:</span> 41, 46</p>
-                                    <p><span class="text-red-400 font-semibold">Direct Bus:</span> 3002</p>
+                                    <p><span class="text-blue-400 font-semibold" data-lang-key="venueSchoolShuttleLabel">{t('venueSchoolShuttleLabel')}</span> <span data-lang-key="venueSchoolShuttleValue">{t('venueSchoolShuttleValue')}</span></p>
+                                    <p><span class="text-green-400 font-semibold" data-lang-key="venueTrunkBuses">{t('venueTrunkBuses')}</span> 8, 8A, 16, 58</p>
+                                    <p><span class="text-purple-400 font-semibold" data-lang-key="venueCircularBuses">{t('venueCircularBuses')}</span> 41, 46</p>
+                                    <p><span class="text-red-400 font-semibold" data-lang-key="venueDirectBus">{t('venueDirectBus')}</span> 3002</p>
                                 </div>
                             </div>
                         </div>
                         <div class="hidden md:block md:col-span-1">
-                            <img src="/icons/subwayexit.svg" alt="Subway Exit Guide" class="rounded-lg w-full h-full object-cover opacity-70" />
+                            <img src="/icons/subwayexit.svg" alt="Subway Exit Guide" loading="lazy" decoding="async" class="rounded-lg w-full h-full object-cover opacity-70" />
                         </div>
                     </div>
                 </div>
@@ -209,15 +205,15 @@ function getBusColor(type) {
                     <div>
                         <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
                             <span class="text-blue-400">🚌</span>
-                            Buses via Incheon Nat'l Univ. Station
+                            <span data-lang-key="venueBusesViaStation">{t('venueBusesViaStation')}</span>
                         </h3>
                         <div class="overflow-x-auto rounded-lg border border-slate-700">
                             <table class="w-full bg-slate-800">
                                 <thead class="bg-slate-700">
                                     <tr>
-                                        <th class="p-4 text-left font-semibold text-slate-200">Bus Number</th>
-                                        <th class="p-4 text-left font-semibold text-slate-200">Final Stop</th>
-                                        <th class="p-4 text-left font-semibold text-slate-200">Intermediate Stop</th>
+                                        <th class="p-4 text-left font-semibold text-slate-200" data-lang-key="venueBusNumber">{t('venueBusNumber')}</th>
+                                        <th class="p-4 text-left font-semibold text-slate-200" data-lang-key="venueFinalStop">{t('venueFinalStop')}</th>
+                                        <th class="p-4 text-left font-semibold text-slate-200" data-lang-key="venueIntermediateStop">{t('venueIntermediateStop')}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -228,8 +224,8 @@ function getBusColor(type) {
                                                     <span class={`bus-badge ${getBusColor(bus.type)}`}>{bus.number}</span>
                                                 </div>
                                             </td>
-                                            <td class="p-4 text-slate-300 text-sm">{bus.finalStop}</td>
-                                            <td class="p-4 text-slate-300 text-sm">{bus.intermediate}</td>
+                                            <td class="p-4 text-slate-300 text-sm" data-lang-key={bus.finalStopKey}>{t(bus.finalStopKey)}</td>
+                                            <td class="p-4 text-slate-300 text-sm" data-lang-key={bus.intermediateKey}>{t(bus.intermediateKey)}</td>
                                         </tr>
                                     ))}
                                 </tbody>
@@ -241,15 +237,15 @@ function getBusColor(type) {
                     <div>
                         <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
                             <span class="text-green-400">🚌</span>
-                            Buses via Songdo Campus
+                            <span data-lang-key="venueBusesViaCampus">{t('venueBusesViaCampus')}</span>
                         </h3>
                         <div class="overflow-x-auto rounded-lg border border-slate-700">
                             <table class="w-full bg-slate-800">
                                 <thead class="bg-slate-700">
                                     <tr>
-                                        <th class="p-4 text-left font-semibold text-slate-200">Bus Number</th>
-                                        <th class="p-4 text-left font-semibold text-slate-200">Final Stop</th>
-                                        <th class="p-4 text-left font-semibold text-slate-200">Intermediate Stop</th>
+                                        <th class="p-4 text-left font-semibold text-slate-200" data-lang-key="venueBusNumber">{t('venueBusNumber')}</th>
+                                        <th class="p-4 text-left font-semibold text-slate-200" data-lang-key="venueFinalStop">{t('venueFinalStop')}</th>
+                                        <th class="p-4 text-left font-semibold text-slate-200" data-lang-key="venueIntermediateStop">{t('venueIntermediateStop')}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -260,8 +256,8 @@ function getBusColor(type) {
                                                     <span class={`bus-badge ${getBusColor(bus.type)}`}>{bus.number}</span>
                                                 </div>
                                             </td>
-                                            <td class="p-4 text-slate-300 text-sm">{bus.finalStop}</td>
-                                            <td class="p-4 text-slate-300 text-sm">{bus.intermediate}</td>
+                                            <td class="p-4 text-slate-300 text-sm" data-lang-key={bus.finalStopKey}>{t(bus.finalStopKey)}</td>
+                                            <td class="p-4 text-slate-300 text-sm" data-lang-key={bus.intermediateKey}>{t(bus.intermediateKey)}</td>
                                         </tr>
                                     ))}
                                 </tbody>
@@ -274,24 +270,24 @@ function getBusColor(type) {
                 <div class="mt-12 grid md:grid-cols-2 gap-8" data-aos="fade-up">
                     <div class="bg-blue-900/20 rounded-lg p-6 border border-blue-700/50">
                         <h4 class="font-bold text-blue-400 mb-3 flex items-center gap-2">
-                            <span>💡</span> Pro Tips
+                            <span>💡</span> <span data-lang-key="venueProTipsTitle">{t('venueProTipsTitle')}</span>
                         </h4>
                         <ul class="text-slate-300 space-y-2 text-sm">
-                            <li>• Use T-money or WOWPASS card for convenient payment</li>
-                            <li>• Check real-time bus arrival via mobile apps</li>
-                            <li>• Campus shuttle runs every 15-20 minutes</li>
-                            <li>• Allow extra time during rush hours (7-9 AM, 5-7 PM)</li>
+                            <li data-lang-key="venueTipPayment">{t('venueTipPayment')}</li>
+                            <li data-lang-key="venueTipRealtime">{t('venueTipRealtime')}</li>
+                            <li data-lang-key="venueTipShuttle">{t('venueTipShuttle')}</li>
+                            <li data-lang-key="venueTipRushHours">{t('venueTipRushHours')}</li>
                         </ul>
                     </div>
                     <div class="bg-green-900/20 rounded-lg p-6 border border-green-700/50">
                         <h4 class="font-bold text-green-400 mb-3 flex items-center gap-2">
-                            <span>🕐</span> Operating Hours
+                            <span>🕐</span> <span data-lang-key="venueScheduleNotesTitle">{t('venueScheduleNotesTitle')}</span>
                         </h4>
                         <ul class="text-slate-300 space-y-2 text-sm">
-                            <li>• <strong>Subway:</strong> 5:30 AM - 11:30 PM</li>
-                            <li>• <strong>City Buses:</strong> 5:00 AM - 11:00 PM</li>
-                            <li>• <strong>Express Buses:</strong> 6:00 AM - 10:00 PM</li>
-                            <li>• <strong>Campus Shuttle:</strong> 7:00 AM - 6:00 PM</li>
+                            <li>• <strong data-lang-key="venuePublicTransitLabel">{t('venuePublicTransitLabel')}</strong> <span data-lang-key="venuePublicTransitDesc">{t('venuePublicTransitDesc')}</span></li>
+                            <li>• <strong data-lang-key="venueSchoolShuttleScheduleLabel">{t('venueSchoolShuttleScheduleLabel')}</strong> <span data-lang-key="venueSchoolShuttleScheduleDesc">{t('venueSchoolShuttleScheduleDesc')}</span></li>
+                            <li>• <strong data-lang-key="venueConferencePeriodLabel">{t('venueConferencePeriodLabel')}</strong> <span data-lang-key="venueConferencePeriodDesc">{t('venueConferencePeriodDesc')}</span></li>
+                            <li>• <strong data-lang-key="venueRealtimeAppsLabel">{t('venueRealtimeAppsLabel')}</strong> <span data-lang-key="venueRealtimeAppsDesc">{t('venueRealtimeAppsDesc')}</span></li>
                         </ul>
                     </div>
                 </div>
@@ -300,6 +296,29 @@ function getBusColor(type) {
     </main>
     <Footer />
 </Layout>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const tabButtons = document.querySelectorAll('[data-tab]');
+        const tabPanels = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-tab');
+
+                tabButtons.forEach(tab => {
+                    const isActive = tab === button;
+                    tab.classList.toggle('active', isActive);
+                    tab.setAttribute('aria-selected', String(isActive));
+                });
+
+                tabPanels.forEach(panel => {
+                    panel.classList.toggle('hidden', panel.id !== targetId);
+                });
+            });
+        });
+    });
+</script>
 
 <style>
     .tab-btn {
@@ -313,8 +332,8 @@ function getBusColor(type) {
     }
     
     .tab-btn.active {
-        color: #FBBF24;
-        border-bottom-color: #FBBF24;
+        color: #D2B06A;
+        border-bottom-color: #D2B06A;
     }
     
     .route-card {
@@ -335,11 +354,11 @@ function getBusColor(type) {
         font-family: monospace;
     }
     
-    .trunk { background-color: #3B82F6; color: white; }
-    .circular { background-color: #10B981; color: white; }
-    .express { background-color: #EF4444; color: white; }
-    .metro-express { background-color: #8B5CF6; color: white; }
-    .metro-rapid { background-color: #F59E0B; color: black; }
+    .trunk { background-color: #4F73A8; color: white; }
+    .circular { background-color: #4F8B73; color: white; }
+    .express { background-color: #A75C54; color: white; }
+    .metro-express { background-color: #75649E; color: white; }
+    .metro-rapid { background-color: #D2B06A; color: #111827; }
     
     .subway-map {
         min-height: 200px;

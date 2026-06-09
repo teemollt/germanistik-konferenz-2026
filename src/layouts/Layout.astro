@@ -60,9 +60,6 @@ const defaultDescription = "Asian German Studies Conference 2027 (Asiatische Ger
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-    <!-- ▼▼▼ 1. AOS 라이브러리 파일을 여기서 불러옵니다 ▼▼▼ -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <!-- Schema.org Structured Data - Event -->
     <script is:inline type="application/ld+json">
     {
@@ -132,19 +129,26 @@ const defaultDescription = "Asian German Studies Conference 2027 (Asiatische Ger
 <body class="overflow-x-hidden">
     <slot />
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script>
+      import AOS from 'aos';
+
+      document.addEventListener('DOMContentLoaded', () => {
+        AOS.init({ duration: 800, once: true });
+      });
+    </script>
     <script is:inline define:vars={{ content }}>
       document.addEventListener('DOMContentLoaded', () => {
-        if (typeof AOS !== 'undefined') {
-          AOS.init({ duration: 800, once: true });
-        }
-  
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         if (mobileMenuButton && mobileMenu) {
-          mobileMenuButton.onclick = () => mobileMenu.classList.toggle('hidden');
+          const setMenuState = (isOpen) => {
+            mobileMenu.classList.toggle('hidden', !isOpen);
+            mobileMenuButton.setAttribute('aria-expanded', String(isOpen));
+          };
+
+          mobileMenuButton.onclick = () => setMenuState(mobileMenu.classList.contains('hidden'));
           mobileMenu.querySelectorAll('a').forEach(link => {
-            link.onclick = () => mobileMenu.classList.add('hidden');
+            link.onclick = () => setMenuState(false);
           });
         }
   
@@ -160,7 +164,7 @@ const defaultDescription = "Asian German Studies Conference 2027 (Asiatische Ger
   
           document.querySelectorAll('[data-lang-key]').forEach(el => {
             const key = el.getAttribute('data-lang-key');
-            if (langContent[key] !== undefined) el.innerHTML = langContent[key];
+            if (langContent[key] !== undefined) el.textContent = langContent[key];
           });
   
           document.querySelectorAll('[data-lang-key-list]').forEach(ul => {
@@ -173,6 +177,31 @@ const defaultDescription = "Asian German Studies Conference 2027 (Asiatische Ger
                 ul.appendChild(li);
               });
             }
+          });
+
+          document.querySelectorAll('[data-lang-team-list]').forEach(teamGrid => {
+            if (!Array.isArray(langContent.teamMembers)) return;
+            teamGrid.innerHTML = '';
+
+            langContent.teamMembers.forEach(member => {
+              const memberDiv = document.createElement('div');
+              const name = document.createElement('p');
+              const details = document.createElement('p');
+              const institution = document.createElement('span');
+
+              name.className = 'font-bold text-white';
+              name.textContent = member.name;
+
+              details.className = 'text-sm text-slate-400';
+              details.textContent = member.role;
+
+              institution.textContent = member.institution;
+              details.appendChild(document.createElement('br'));
+              details.appendChild(institution);
+
+              memberDiv.append(name, details);
+              teamGrid.appendChild(memberDiv);
+            });
           });
   
           Object.values(langButtons).forEach(buttons => {

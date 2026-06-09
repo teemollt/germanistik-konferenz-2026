@@ -9,9 +9,9 @@ interface Props {
 const { title, href, icon, langKey } = Astro.props;
 ---
 
-<a href={href} class="block bg-white/65 backdrop-blur-sm p-6 rounded-lg shadow-md hover:bg-gray-400/90 transition-colors duration-300 h-full flex items-center">
+<a href={href} class="block bg-white/[0.78] backdrop-blur-sm p-6 rounded-md shadow-[0_10px_28px_rgba(0,0,0,0.14)] ring-1 ring-white/30 hover:bg-white/90 hover:shadow-[0_14px_34px_rgba(0,0,0,0.18)] transition-all duration-300 h-full flex items-center">
   <div class="flex items-center space-x-4">
-    <img src={icon} alt="" class="h-8 w-8" />
+    <img src={icon} alt="" loading="lazy" decoding="async" class="h-8 w-8" />
     <h4 class="text-lg font-semibold text-gray-800" data-lang-key={langKey}>{title}</h4>
   </div>
 </a>

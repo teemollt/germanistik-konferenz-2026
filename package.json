@@ -9,14 +9,16 @@
     "astro": "astro",
     "deploy": "gh-pages -d dist"
   },
+  "engines": {
+    "node": ">=22.12.0",
+    "npm": ">=10.8.2"
+  },
   "dependencies": {
-    "@astrojs/sitemap": "^3.6.0",
-    "@astrojs/tailwind": "^6.0.2",
-    "@tailwindcss/vite": "^4.1.12",
-    "@types/aos": "^3.0.7",
+    "@astrojs/sitemap": "^3.7.3",
+    "@tailwindcss/vite": "^4.3.0",
     "aos": "^2.3.4",
-    "astro": "^5.12.4",
-    "tailwindcss": "^3.4.17"
+    "astro": "^6.4.4",
+    "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"

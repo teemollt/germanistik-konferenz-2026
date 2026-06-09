@@ -2,19 +2,18 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import { content } from '../../i18n/content';
 ---
 
-<Layout title="Anreise und Unterkunft - AGT 2026 Incheon">
+<Layout title="Anreise und Unterkunft - AGT 2027 Incheon">
     <Header />
     <main class="relative z-30 py-20 md:py-24 bg-[#14223f]">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 md:mb-16" data-lang-key="subInfoAnreise">Anreise und Unterkunft</h2>
             <div class="max-w-4xl mx-auto text-slate-300">
-                <p class="mb-4">
+                <p class="mb-4" data-lang-key="arrivalAccommodationDesc1">
                     Informationen zur Anreise zum Konferenzort und zu Unterkunftsmöglichkeiten in Incheon werden hier in Kürze zur Verfügung gestellt.
                 </p>
-                <p>
+                <p data-lang-key="arrivalAccommodationDesc2">
                     Wir werden Empfehlungen für Hotels in verschiedenen Preiskategorien sowie Informationen zur Nutzung des öffentlichen Nahverkehrs bereitstellen.
                 </p>
             </div>

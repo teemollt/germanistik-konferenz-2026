@@ -1,9 +1,12 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  integrations: [tailwind(), sitemap()],
+  integrations: [sitemap()],
   site: 'https://agt2027.org/',
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });

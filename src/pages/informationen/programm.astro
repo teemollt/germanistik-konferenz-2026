@@ -3,18 +3,107 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { content } from '../../i18n/content';
+import { programAttachment, programSections } from '../../data/programSections';
+
+const t = (key: string) => (content.de as unknown as Record<string, string>)[key] ?? key;
 ---
 
-<Layout title="Programm und Sektionen - AGT 2026 Incheon">
+<Layout title={`${t('venueProgramTitle')} - AGT 2027 Incheon`}>
     <Header />
-    <main class="relative z-30 py-20 md:py-24">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 md:mb-16" data-lang-key="venueProgramTitle">Programm und Sektionen</h2>
-            <div class="max-w-4xl mx-auto text-slate-300 text-lg leading-relaxed space-y-6">
-                <p data-lang-key="venueProgramDesc">Das detaillierte Programm wird nach Abschluss der Sektions- und Vortragsanmeldungen bekannt gegeben. Erwarten Sie spannende Keynotes, vielfältige Sektionen und interaktive Workshops.</p>
-                <!-- More content can be added here -->
+    <main class="relative z-30 py-20 md:py-24 bg-[#14223f]">
+        <section class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <div class="mb-12 md:mb-14 text-center">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-5" data-lang-key="venueProgramTitle">{t('venueProgramTitle')}</h2>
+                    <p class="text-slate-300 text-lg leading-relaxed max-w-3xl mx-auto" data-lang-key="venueProgramDesc">{t('venueProgramDesc')}</p>
+                </div>
+
+                <section class="mb-12 rounded-md border border-white/10 bg-slate-900/60 p-6 md:p-8 shadow-[0_18px_50px_rgba(0,0,0,0.2)]">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#d2b06a]" data-lang-key="programOverviewTitle">{t('programOverviewTitle')}</p>
+                            <p class="mt-3 text-slate-300" data-lang-key="programOverviewDesc">{t('programOverviewDesc')}</p>
+                            {!programAttachment.href && (
+                                <p class="mt-2 text-sm text-slate-500" data-lang-key="programAttachmentPendingNote">{t('programAttachmentPendingNote')}</p>
+                            )}
+                        </div>
+
+                        {programAttachment.href ? (
+                            <a
+                                href={programAttachment.href}
+                                download={programAttachment.filename}
+                                class="inline-flex items-center justify-center gap-2 rounded-md border border-[#d2b06a]/60 px-5 py-3 text-sm font-semibold text-[#ead59a] transition hover:bg-[#d2b06a]/10 hover:text-white"
+                                data-lang-key="programDownloadButton"
+                            >
+                                {t('programDownloadButton')}
+                            </a>
+                        ) : (
+                            <button
+                                type="button"
+                                class="inline-flex cursor-not-allowed items-center justify-center gap-2 rounded-md border border-slate-600 px-5 py-3 text-sm font-semibold text-slate-500"
+                                disabled
+                                data-lang-key="programAttachmentPending"
+                            >
+                                {t('programAttachmentPending')}
+                            </button>
+                        )}
+                    </div>
+                </section>
+
+                <section>
+                    <div class="mb-8">
+                        <h3 class="text-2xl md:text-3xl font-bold text-white" data-lang-key="acceptedSectionsTitle">{t('acceptedSectionsTitle')}</h3>
+                        <p class="mt-3 text-slate-300 leading-relaxed" data-lang-key="acceptedSectionsIntro">{t('acceptedSectionsIntro')}</p>
+                    </div>
+
+                    {programSections.length > 0 ? (
+                        <div class="divide-y divide-white/10 rounded-md border border-white/10 bg-slate-900/50">
+                            {programSections.map((section, index) => (
+                                <article class="p-5 md:p-6">
+                                    <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                                        <div class="min-w-0">
+                                            <p class="mb-2 text-sm font-semibold text-[#d2b06a]">{String(index + 1).padStart(2, '0')}</p>
+                                            <h4 class="text-xl font-bold leading-snug text-white" data-lang-key={section.titleKey}>{t(section.titleKey)}</h4>
+                                            <p class="mt-3 text-sm text-slate-400">
+                                                <span data-lang-key="sectionContactLabel">{t('sectionContactLabel')}</span>
+                                                <a href={`mailto:${section.contactEmail}`} class="ml-1 text-slate-300 underline decoration-[#d2b06a]/60 underline-offset-4 hover:text-white">
+                                                    {section.contactEmail}
+                                                </a>
+                                            </p>
+                                        </div>
+
+                                        {section.topicFileHref ? (
+                                            <a
+                                                href={section.topicFileHref}
+                                                download={section.topicFileName}
+                                                class="inline-flex shrink-0 items-center justify-center rounded-md border border-[#d2b06a]/50 px-4 py-2 text-sm font-semibold text-[#ead59a] transition hover:bg-[#d2b06a]/10 hover:text-white"
+                                                data-lang-key="sectionTopicDownload"
+                                            >
+                                                {t('sectionTopicDownload')}
+                                            </a>
+                                        ) : (
+                                            <button
+                                                type="button"
+                                                class="inline-flex shrink-0 cursor-not-allowed items-center justify-center rounded-md border border-slate-600 px-4 py-2 text-sm font-semibold text-slate-500"
+                                                disabled
+                                                data-lang-key="sectionTopicPending"
+                                            >
+                                                {t('sectionTopicPending')}
+                                            </button>
+                                        )}
+                                    </div>
+                                </article>
+                            ))}
+                        </div>
+                    ) : (
+                        <div class="rounded-md border border-dashed border-[#d2b06a]/35 bg-slate-900/35 p-6 md:p-8 text-center">
+                            <p class="text-lg font-semibold text-white" data-lang-key="sectionsPendingTitle">{t('sectionsPendingTitle')}</p>
+                            <p class="mt-3 text-slate-300 leading-relaxed" data-lang-key="sectionsPendingDesc">{t('sectionsPendingDesc')}</p>
+                        </div>
+                    )}
+                </section>
             </div>
-        </div>
+        </section>
     </main>
     <Footer />
 </Layout>
