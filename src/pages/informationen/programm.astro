@@ -60,7 +60,7 @@ const t = (key: string) => (content.de as unknown as Record<string, string>)[key
                         <div class="divide-y divide-white/10 rounded-md border border-white/10 bg-slate-900/50">
                             {programSections.map((section, index) => (
                                 <article class="p-5 md:p-6">
-                                    <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                                    <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                                         <div class="min-w-0">
                                             <p class="mb-2 text-sm font-semibold text-[#d2b06a]">{String(index + 1).padStart(2, '0')}</p>
                                             <h4 class="text-xl font-bold leading-snug text-white" data-lang-key={section.titleKey}>{t(section.titleKey)}</h4>
