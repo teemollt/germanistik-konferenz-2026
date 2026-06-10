@@ -117,10 +117,9 @@ export const content = {
       "presidentTitleOrg": "der Koreanischen Gesellschaft für Germanistik",
       "registerTitle": "Anmeldung",
       "registerType1Title": "1. Sektionsleitung",
-      "registerType1Deadline": "Bewerbungsfrist: Ende März 2026",
-      "registerType1Desc": "Leiten Sie eine Sektion und gestalten Sie das wissenschaftliche Programm aktiv mit.",
-      "sectionRequirements": "Für die Bewerbung als Sektionsleitung ist eine Beschreibung des Sektionsthemas im Umfang von einer A4-Seite (inkl. Bibliographie) erforderlich.",
-      "registerType1Btn": "Formular (Sektion)",
+      "sectionLeaderClosedNotice": "Die Bewerbungsphase für die Sektionsleitung ist abgeschlossen.",
+      "sectionLeaderProgramNotice": "Informationen zu den angenommenen Sektionen finden Sie unter Informationen - Programm und Sektionen.",
+      "registerType1Btn": "Programm und Sektionen",
       "registerType2Title": "2. Vortragende",
       "registerType2Deadline": "Bewerbungsfrist: Mai - Dez. 2026",
       "registerType2Desc": "Präsentieren Sie Ihre Forschungsergebnisse einem internationalen Publikum.",
@@ -159,7 +158,7 @@ export const content = {
       "venueUniTitle": "Incheon National University",
       "venueUniDesc": "Die Konferenz findet auf dem modernen Songdo-Campus der Incheon National University statt. Der Campus ist bekannt für seine hochmoderne Infrastruktur und seine inspirierende Umgebung, die Wissenschaft und Natur vereint.",
       "venueProgramTitle": "Programm und Sektionen",
-      "venueProgramDesc": "Das detaillierte Programm wird nach Abschluss der Sektions- und Vortragsanmeldungen bekannt gegeben. Erwarten Sie spannende Keynotes, vielfältige Sektionen und interaktive Workshops.",
+      "venueProgramDesc": "Das detaillierte Programm wird nach Abschluss der Vortragsanmeldungen bekannt gegeben. Erwarten Sie spannende Keynotes, vielfältige Sektionen und interaktive Workshops.",
       "programOverviewTitle": "Programmübersicht",
       "programOverviewDesc": "Der Programmplan wird hier veröffentlicht, sobald die Datei vorliegt.",
       "programDownloadButton": "Programm herunterladen",
@@ -282,7 +281,7 @@ export const content = {
           "institution": "Pusan National University, Pusan"
         },
         {
-          "name": "Assoz. Prof. Dr. phil. KIM, Yeon Soo",
+          "name": "Prof. Dr. phil. KIM, Yeon Soo",
           "role": "Programm und Sektionen (Literatur)",
           "institution": "Kangwon National University, Chuncheon"
         },
@@ -367,10 +366,9 @@ export const content = {
       "presidentTitleOrg": "of the Korean Society of German Language and Literature",
       "registerTitle": "Registration",
       "registerType1Title": "1. Section Leaders",
-      "registerType1Deadline": "Application Deadline: End of March 2026",
-      "registerType1Desc": "Lead a section and actively shape the academic program.",
-      "sectionRequirements": "A one-page A4 description of the section topic (including bibliography) is mandatory for all section leader applications.",
-      "registerType1Btn": "Form (Section)",
+      "sectionLeaderClosedNotice": "The application period for section leaders has closed.",
+      "sectionLeaderProgramNotice": "Information about the accepted sections is available under Information - Program and Sections.",
+      "registerType1Btn": "Program and Sections",
       "registerType2Title": "2. Speakers",
       "registerType2Deadline": "Application Period: May - Dec 2026",
       "registerType2Desc": "Present your research findings to an international audience.",
@@ -410,7 +408,7 @@ export const content = {
       "venueUniTitle": "Incheon National University",
       "venueUniDesc": "The conference will take place at the modern Songdo campus of Incheon National University. The campus is known for its state-of-the-art infrastructure and inspiring environment that combines science and nature.",
       "venueProgramTitle": "Program and Sections",
-      "venueProgramDesc": "The detailed program will be announced after the completion of section and presentation registrations. Expect exciting keynotes, diverse sections, and interactive workshops.",
+      "venueProgramDesc": "The detailed program will be announced after the completion of presentation registrations. Expect exciting keynotes, diverse sections, and interactive workshops.",
       "programOverviewTitle": "Program Overview",
       "programOverviewDesc": "The program schedule will be published here as soon as the file is available.",
       "programDownloadButton": "Download Program",
@@ -533,7 +531,7 @@ export const content = {
           "institution": "Pusan National University, Pusan"
         },
         {
-          "name": "Assoz. Prof. Dr. phil. KIM, Yeon Soo",
+          "name": "Prof. Dr. phil. KIM, Yeon Soo",
           "role": "Program and Sections (Literature)",
           "institution": "Kangwon National University, Chuncheon"
         },
