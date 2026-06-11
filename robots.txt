@@ -1,0 +1,6 @@
+# robots.txt for AGT 2027 Conference Website
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://agt2027.org/sitemap-index.xml
