@@ -36,9 +36,12 @@ const base = import.meta.env.BASE_URL;
                         <p class="mt-4" data-lang-key="registerType2Desc">Präsentieren Sie Ihre Forschungsergebnisse einem internationalen Publikum.</p>
                         <div class="mt-5 rounded-sm border border-[#d2b06a]/25 bg-black/25 p-3 text-left text-xs text-slate-300">
                             <p class="font-semibold text-[#ead59a]" data-lang-key="presentationNoticeTitle">Hinweis zur Vortragseinreichung</p>
-                            <p class="mt-2" data-lang-key="presentationSectionLeaderContactNotice">Bei Fragen wenden Sie sich bitte direkt per E-Mail an die jeweilige Sektionsleitung.</p>
-                            <p class="mt-2" data-lang-key="presentationSectionRequirement">Bitte geben Sie im Formular unbedingt an, in welcher Sektion Sie vortragen möchten.</p>
-                            <p class="mt-2" data-lang-key="presentationSameAsSectionNotice">Die weiteren Angaben orientieren sich am Formular für die Sektionsleitung.</p>
+                            <p class="mt-2" data-lang-key="presentationDurationNotice">Ein Vortrag umfasst insgesamt 30 Minuten: 20 Minuten Vortrag und 10 Minuten Diskussion.</p>
+                            <p class="mt-2">
+                                <span data-lang-key="presentationSectionLeaderContactNotice">Bei Fragen wenden Sie sich bitte direkt per E-Mail an die jeweilige Sektionsleitung. Die E-Mail-Adressen der Sektionsleitungen finden Sie auf der Seite</span>
+                                <a href={`${base}informationen/programm/`} class="text-[#ead59a] underline decoration-[#d2b06a]/60 underline-offset-4 hover:text-white" data-lang-key="registerType1Btn">Programm und Sektionen</a>
+                                <span data-lang-key="presentationSectionLeaderContactSuffix">.</span>
+                            </p>
                         </div>
                     </div>
                     <a href="https://forms.gle/sYJfXE1iv74ZLpfb6" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block btn-gold font-semibold px-6 py-2 rounded-md transition" data-lang-key="registerType2Btn">Formular (Vortrag)</a>
