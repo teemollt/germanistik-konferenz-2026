@@ -419,7 +419,7 @@ export const content = {
       "sectionTopicDownload": "Download topic description",
       "sectionTopicPending": "Topic description coming soon",
       "sectionContactLabel": "Contact:",
-      "programSection01Title": "East Asia Discourses in German-Language Literature and Culture: Representations, Influences, Reinterpretations",
+      "programSection01Title": "East Asian Discourses in German-Language Literature and Culture. Representations, Influences, Reinterpretations",
       "programSection02Title": "Translation as a Transcultural Space: German-Asian Literary Relations",
       "programSection03Title": "The Significance of Migration Literature in German Teaching and Possibilities for Its Didacticization",
       "programSection04Title": "Rilke, Kafka & Co. in East Asia: Literary Reception and Transformation in the Context of Modernity",
