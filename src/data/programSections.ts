@@ -9,6 +9,7 @@ export type ProgramSection = {
   contactEmail: string;
   topicFileHref: string | null;
   topicFileName: string;
+  status?: "cancelled";
 };
 
 export const programAttachment: ProgramAttachment = {
@@ -35,8 +36,9 @@ export const programSections: ProgramSection[] = [
     id: "section-03",
     titleKey: "programSection03Title",
     contactEmail: "gaurib.fld@gmail.com",
-    topicFileHref: "/files/sections/03-stellenwert-der-migrationsliteratur.docx",
+    topicFileHref: null,
     topicFileName: "03-stellenwert-der-migrationsliteratur.docx",
+    status: "cancelled",
   },
   {
     id: "section-04",
