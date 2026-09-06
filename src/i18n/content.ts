@@ -173,7 +173,7 @@ export const content = {
       "sectionContactLabel": "Kontakt:",
       "programSection01Title": "Ostasien-Diskurse in der deutschsprachigen Literatur und Kultur. Repräsentationen, Einflüsse, Umdeutungen",
       "programSection02Title": "Übersetzung als transkultureller Raum: Deutsch-asiatische Literaturbeziehungen",
-      "programSection03Title": "Abgesagt: Stellenwert der Migrationsliteratur im Deutschunterricht und Möglichkeiten ihrer Didaktisierung",
+      "programSection03Title": "",
       "programSection04Title": "Rilke, Kafka & Co. in Ostasien: Literarische Rezeption und Transformation im Kontext der Moderne",
       "programSection05Title": "Welche Bedeutung hat Deutsch als Fremdsprache im gegenwärtigen Asien? Empirische Forschung zu internationalen Kooperationen, individuellen Lernbiographien und innovativen Lehr- und Lernumgebungen.",
       "programSection06Title": "Literatur und Medien",
@@ -288,7 +288,7 @@ export const content = {
           "institution": "Kangwon National University, Chuncheon"
         },
         {
-          "name": "Assoz. Prof. Dr. phil. KIM, Kyong",
+          "name": "Prof. Dr. phil. KIM, Kyong",
           "role": "Programm und Sektionen (Sprache)",
           "institution": "Pusan National University, Pusan"
         },
@@ -425,7 +425,7 @@ export const content = {
       "sectionContactLabel": "Contact:",
       "programSection01Title": "East Asian Discourses in German-Language Literature and Culture. Representations, Influences, Reinterpretations",
       "programSection02Title": "Translation as a Transcultural Space: German-Asian Literary Relations",
-      "programSection03Title": "Cancelled: The Significance of Migration Literature in German Teaching and Possibilities for Its Didacticization",
+      "programSection03Title": "",
       "programSection04Title": "Rilke, Kafka & Co. in East Asia: Literary Reception and Transformation in the Context of Modernity",
       "programSection05Title": "What Is the Significance of German as a Foreign Language in Contemporary Asia? Empirical Research on International Cooperation, Individual Learning Biographies, and Innovative Teaching and Learning Environments.",
       "programSection06Title": "Literature and Media",
@@ -540,7 +540,7 @@ export const content = {
           "institution": "Kangwon National University, Chuncheon"
         },
         {
-          "name": "Assoz. Prof. Dr. phil. KIM, Kyong",
+          "name": "Prof. Dr. phil. KIM, Kyong",
           "role": "Program and Sections (Language)",
           "institution": "Pusan National University, Pusan"
         },

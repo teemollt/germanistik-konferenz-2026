@@ -13,8 +13,8 @@ export type ProgramSection = {
 };
 
 export const programAttachment: ProgramAttachment = {
-  href: null,
-  filename: "AGT-2027-Programm.pdf",
+  href: "/files/program/programmuebersicht-20260831.pdf",
+  filename: "Programmuebersicht-20260831.pdf",
 };
 
 export const programSections: ProgramSection[] = [
@@ -35,7 +35,7 @@ export const programSections: ProgramSection[] = [
   {
     id: "section-03",
     titleKey: "programSection03Title",
-    contactEmail: "gaurib.fld@gmail.com",
+    contactEmail: "",
     topicFileHref: null,
     topicFileName: "03-stellenwert-der-migrationsliteratur.docx",
     status: "cancelled",

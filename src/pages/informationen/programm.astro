@@ -67,12 +67,14 @@ const t = (key: string) => (content.de as unknown as Record<string, string>)[key
                                         <div class="min-w-0">
                                             <p class={`mb-2 text-sm font-semibold ${isCancelled ? 'text-rose-300' : 'text-[#d2b06a]'}`}>{String(index + 1).padStart(2, '0')}</p>
                                             <h4 class={`text-xl font-bold leading-snug ${isCancelled ? 'text-slate-300' : 'text-white'}`} data-lang-key={section.titleKey}>{t(section.titleKey)}</h4>
-                                            <p class="mt-3 text-sm text-slate-400">
-                                                <span data-lang-key="sectionContactLabel">{t('sectionContactLabel')}</span>
-                                                <a href={`mailto:${section.contactEmail}`} class="ml-1 text-slate-300 underline decoration-[#d2b06a]/60 underline-offset-4 hover:text-white">
-                                                    {section.contactEmail}
-                                                </a>
-                                            </p>
+                                            {section.contactEmail && (
+                                                <p class="mt-3 text-sm text-slate-400">
+                                                    <span data-lang-key="sectionContactLabel">{t('sectionContactLabel')}</span>
+                                                    <a href={`mailto:${section.contactEmail}`} class="ml-1 text-slate-300 underline decoration-[#d2b06a]/60 underline-offset-4 hover:text-white">
+                                                        {section.contactEmail}
+                                                    </a>
+                                                </p>
+                                            )}
                                         </div>
 
                                         {isCancelled ? (
