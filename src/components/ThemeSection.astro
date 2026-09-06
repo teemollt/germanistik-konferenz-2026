@@ -15,7 +15,7 @@
                 </div>
             </div>
 
-            <button id="toggle-desc-btn" class="text-[#d2b06a] hover:text-[#ead59a] font-semibold mt-6">
+            <button id="toggle-desc-btn" class="text-[#d2b06a] hover:text-[#ead59a] font-semibold mt-6" aria-expanded="false" aria-controls="full-desc">
                 <!-- 1. '자세히 보기' 상태 (기본으로 보임) -->
                 <div class="show-more-content inline-flex items-center gap-2">
                     <span data-lang-key="themeBtnReadMore">Mehr erfahren</span>
@@ -24,7 +24,7 @@
                     </svg>
                 </div>
                 <!-- 2. '간략히 보기' 상태 (기본으로 숨김) -->
-                <div class="show-less-content hidden inline-flex items-center gap-2">
+                <div class="show-less-content inline-flex items-center gap-2" hidden>
                     <span data-lang-key="themeBtnShowLess">Weniger anzeigen</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
@@ -49,29 +49,13 @@
             return;
         }
         
-        // 버튼에 클릭 이벤트 리스너 추가
         toggleBtn.addEventListener('click', () => {
+            const willExpand = fullDescEl.classList.contains('hidden');
 
-            // 짧은 설명과 전체 설명의 'hidden' 클래스를 토글
-            // shortDescEl.classList.toggle('hidden');
-            fullDescEl.classList.toggle('hidden');
-
-            // 버튼 내부의 '자세히/간략히' div 표시 상태를 토글
-            showMoreContent.classList.toggle('hidden');
-            showLessContent.classList.toggle('hidden');
-            
-
-
-            // 버튼 텍스트를 변경하기 위한 임시 텍스트
-            // const readMoreText = "Ganze Beschreibung lesen"; // 또는 data-attribute에서 가져올 수 있음
-            // const showLessText = "Weniger anzeigen";
-
-            // 현재 버튼 텍스트를 확인하여 다음 텍스트로 변경
-            // if (toggleBtn.textContent === readMoreText) {
-            //     toggleBtn.textContent = showLessText;
-            // } else {
-            //     toggleBtn.textContent = readMoreText;
-            // }
+            fullDescEl.classList.toggle('hidden', !willExpand);
+            showMoreContent.hidden = willExpand;
+            showLessContent.hidden = !willExpand;
+            toggleBtn.setAttribute('aria-expanded', String(willExpand));
         });
     });
 </script>
